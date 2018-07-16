@@ -1,3 +1,4 @@
+@import "@material/select/mdc-select";
 .header{
   position: relative;
   background-color: #f2f2f2;
@@ -186,7 +187,7 @@ input {
 {
   width: 100%;
   text-align: center;
-  padding-bottom: 33px;
+ padding-bottom: 33px;
   margin-left: 10px;
   margin-bottom: 10px;
   position: relative;
@@ -207,6 +208,8 @@ input {
   background-color: #dddddd;
 }
 
+
+
 .content
 {
   position: absolute;
@@ -219,7 +222,7 @@ input {
 {
   z-index: 1;
   color: white;
-  background-color: #fde74c;
+  
 }
 
 .tab:target a
@@ -231,6 +234,7 @@ input {
 {
   z-index: 1;
 }
+
 
 .price .p{
   text-align: center;
@@ -343,3 +347,45 @@ input {
   border-radius: 5px;
   border: 1px dashed aqua;
 }
+
+.mdc-select__native-control{
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 90%;
+  color: #26532b;
+}
+
+.mdc-floating-label{
+  padding-left: 50px; 
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.open{
+  margin: 10px;
+  padding:3px;
+}
+
+.mdc-floating-label1{
+  padding-left: 80px; 
+  text-align: center;
+  margin-left: 10px;
+  
+}
+
+.open1{
+  margin: 5px;
+  padding:3px;
+}
+
+textarea.wmd-input, textarea#wmd-input {
+    padding: 10px;
+    margin: -1px 0 0;
+    height: 200px;
+    line-height: 1.3;
+    width: 100%;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    -moz-tab-size: 4;
+}
+

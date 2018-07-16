@@ -69,21 +69,46 @@
           <a href="#tab2" style='background-color: #26532b; color:white;'>Shared Space</a>
         </div>
       </div>  
+      <div class='open'></div>
+      <label class="mdc-floating-label">Pick a Price Range:</label>
+      <div class="mdc-select">
 
-      
+        <select class="mdc-select__native-control">
+          <option value="Price Range" disabled selected></option>
+          <option value="grains">
+            less than 5000
+          </option>
+          <option value="vegetables">
+            5000-12000
+          </option>
+          <option value="fruit">
+            12000-20000
+          </option>
+          <option value="fruit">
+            above 20000
+          </option>
+        </select>
+      </div>
+      <div class='open1'></div>
+      <label class="mdc-floating-label1">Preferences:</label>
 
+      <textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length=""></textarea>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action" style="margin: 10px; margin-left: 80px; border: 3px solid #26532b; height: 50px; width: 130px;">SEARCH
+  </button>
   </div>
 
       <!--The div element for the map -->
 
   <div id="map"></div>
+ 
   </div>
   <script>
       // Initialize and add the map
       function initMap() {
-       // The location of Uluru
+       // The location of Ktm
         var Kathmandu = {lat: 27.7172, lng: 85.3240};
-       // The map, centered at Uluru
+       // The map, centered at Ktm
         var map = new google.maps.Map(document.getElementById('map'), {zoom: 16, center: Kathmandu});
 
         var contentString = 'This is Ktm'
@@ -95,7 +120,7 @@
         
 
 
-        // The marker, positioned at Uluru
+        // The marker, positioned at Ktm
         var marker = new google.maps.Marker({position: Kathmandu, map: map, title:'Kathmandu'});
 
         marker.addListener('click', function() {
@@ -122,6 +147,12 @@ $('.search-bar .icon').on('click', function() {
   $(this).parent().toggleClass('active');
 });
 </script>
+
+<script type="text/javascript">
+const select = new mdc.select.MDCSelect(document.querySelector('.mdc-select'));
+select.listen('change', () => {
+  alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+});</script>
     
   </body>
 </html>
