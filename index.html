@@ -14,9 +14,9 @@
         <a href='#'> Post your Property</a>
       </div>
     </div>
+    <div class="flex">
     <div class='vertical-menu'>
-      <a href = '#' class='active'>Search </a>
-      <fieldset style='background-color: white;'>
+      <fieldset id='field' style='background-color: white;'>
         <legend>Choose your category</legend>
 
         <div>
@@ -70,10 +70,52 @@
         </div>
       </div>  
 
-      <div class="price" style='text-align:center'>
-        <p> Price Range: </p>
-      </div>
-    </div>
+      
+
+  </div>
+
+      <!--The div element for the map -->
+
+  <div id="map"></div>
+  </div>
+  <script>
+      // Initialize and add the map
+      function initMap() {
+       // The location of Uluru
+        var Kathmandu = {lat: 27.7172, lng: 85.3240};
+       // The map, centered at Uluru
+        var map = new google.maps.Map(document.getElementById('map'), {zoom: 16, center: Kathmandu});
+
+        var contentString = 'This is Ktm'
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        
+
+
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: Kathmandu, map: map, title:'Kathmandu'});
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+  </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyCmlYRGM1xqhjWv6MZB-yTEU0ozZyPcTqY
+&callback=initMap">
+  </script>
+
+
+  
 
 <script type="text/javascript">
 $('.search-bar .icon').on('click', function() {
