@@ -1,4 +1,71 @@
 @import "@material/select/mdc-select";
+
+
+.navbar{
+  padding: 10px;
+  background: #ffffff;
+  width: 100%;
+  border-bottom: 2px solid #f2f2f2; 
+  position: fixed;
+}
+
+.left-navbar{
+  float: left;
+  width: 70%;
+}
+.logo{
+  float: left;
+  
+}
+.list-button{
+  float: right;
+}
+.right-navbar{
+  float: right;
+  
+}
+.login{
+  margin-right: 30px;
+}
+
+
+button {
+  background-color: #26532b; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #26532b;
+    font-size: 14px;
+    padding: 10px 18px;
+}
+
+.button:hover {
+    background-color: #26532b;
+    color: white;
+}
+.btn{
+  background-color: #26532b;
+    color: white;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: white; 
+    color: black; 
+        
+}
+
 .header{
   position: relative;
   background-color: #f2f2f2;
@@ -80,6 +147,7 @@ a {
 
 .vertical-menu{
   padding: 10px;
+  margin-top: 60px;
   width: 66.6666666%;
   float: left;
   height: 800px;
@@ -336,7 +404,7 @@ input {
       #map {
         position: fixed;
         margin:10px;
-        margin-top: 8px;
+        margin-top: 80px;
         margin-left: 10px;
         border: 5px;
         height: 600px;  /* The height is 400 pixels */
@@ -516,4 +584,41 @@ input::-moz-focus-outer {
 
 .available{
     border: 0px ;
+}
+
+/*Places Found*/
+.row{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+.rwrapper{
+  padding: 35px;}
+.rlisting{background-color: #fff;overflow: hidden;}
+.nopad{padding:0;}
+.rfooter{
+  background: #f1f3f5;
+  border-top: 1px #ebebeb solid;
+  width: 100%;
+  padding:10px 15px}
+.rlisting h5,.rlisting p{
+  padding:0 15px;
+}
+.heading{
+  font-size: 34px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+img{
+  height: 270px;
+  width: 260px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
