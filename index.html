@@ -26,26 +26,17 @@
   </div>
     <div class="">
     <div class='vertical-menu'>
-      <fieldset id='field' style='background-color: white;'>
+      <fieldset id='field'>
         <legend>Choose your category</legend>
 
-        <div>
-          <input type="checkbox" id="Room" name="feature"
-               value="Room" checked />
-          <label for="Room">Room</label>
-        
-          <input type="checkbox" id="Flat" name="feature"
-               value="Flat" />
-          <label for="Flat">Flat</label>
-        
-        
-          <input type="checkbox" id="Apartment" name="feature"
-               value="Apartment" />
-          <label for="Apartment">Apartment</label>
-        
-          <input type="checkbox" id="House" name="feature"
-               value="House" />
-          <label for="House">House</label>
+        <div class="car">
+          <button class="btn"><i class="fa fa-bed"></i> Room</button>
+          <button class="btn"><i class="fa fa-building"></i> Apartment</button>
+          <button class="btn"><i class="fa fa-home"></i> Home</button>
+          <button class="btn"><i class="fa fa-hotel"></i> Hotel</button>
+          <button class="btn"><i class="fa fa-map"></i> Hostel</button>
+          <button class="btn"><i class="fa fa-map"></i> Land</button>
+          
         </div>
       </fieldset>
 
@@ -54,18 +45,13 @@
         <input class="input-text" type="text" name="Search" placeholder="Search By Location" style='background-color: white;'>
       </div>
 
-     <div class='space'>
-          <input type="checkbox" id="Private" name="Space"
-               value="Private" checked />
-          <label for="Private" style="padding:10px;">Private Space</label>
-        
-          <input type="checkbox" id="Shared" name="Space"
-               value="Shared" style="padding:10px;"/>
-          <label for="Shared" style="padding:10px;">Shared Space</label>
+     <div class="space">
+          
+          <label>Shared Space</label>
       </div>  
       
       <div class="range-slider">
-      <label class="mdc-floating-label">Pick a Price:</label>
+      Pick a Price:
       
         <input class="range-slider__range" type="range" value="3000" min="1000" max="50000" step="50">
         <span class="range-slider__value">0</span>
@@ -77,25 +63,14 @@
         <legend>Amenities </legend>
 
         <div>
-          <input type="checkbox" id="Room" name="feature"
-               value="Room" checked />
           <label for="Room">Wifi</label>
         
-          <input type="checkbox" id="Flat" name="feature"
-               value="Flat" />
           <label for="Flat">Television</label>
         
         
-          <input type="checkbox" id="Apartment" name="feature"
-               value="Apartment" />
           <label for="Apartment">Parking</label>
-        
-          <input type="checkbox" id="House" name="feature"
-               value="House" />
           <label for="House">Laundry</label>
         
-          <input type="checkbox" id="Land" name="feature"
-               value="Land" />
           <label for="Land">Hot and Cold Water</label>
         </div>
       </fieldset>
@@ -177,7 +152,7 @@
 
       <!--The div element for the map -->
 
-  <div class="content-wrapper">
+  <div class="map-wrapper">
     <div id="map"></div>
      
     </div>
