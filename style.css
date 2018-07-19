@@ -580,6 +580,7 @@ input::-moz-focus-outer {
 }
 .space{
   margin-top: 10px;
+  padding: 20px;
 }
 
 .available{
