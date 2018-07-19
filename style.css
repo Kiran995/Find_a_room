@@ -407,7 +407,7 @@ input {
         margin-top: 80px;
         margin-left: 10px;
         border: 5px;
-        height: 600px;  /* The height is 400 pixels */
+        height: 580px;  /* The height is 400 pixels */
        }
 .flex{
   display: flex;
