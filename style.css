@@ -80,7 +80,7 @@ a {
 
 .vertical-menu{
   padding: 10px;
-  width: 350px;
+  width: 66.6666666%;
   float: left;
   height: 800px;
   overflow-y: auto;
@@ -334,11 +334,12 @@ input {
 
 /* Set the size of the div element that contains the map */
       #map {
+        position: fixed;
         margin:10px;
         margin-top: 8px;
         margin-left: 10px;
         border: 5px;
-        height: 400px;  /* The height is 400 pixels */
+        height: 600px;  /* The height is 400 pixels */
        }
 .flex{
   display: flex;
@@ -358,7 +359,7 @@ input {
 }
 
 .mdc-floating-label{
-  padding-left: 50px; 
+  padding-left: 4px; 
   text-align: center;
   margin-left: 10px;
   margin-top: 10px;
@@ -395,7 +396,11 @@ textarea.wmd-input, textarea#wmd-input {
 
 .content-wrapper{
   float:left;
-  width: calc(100% - 350px);
+  width: 33.3333%;
+  position: fixed;
+  margin-left: 66.66666%;
+
+
 }
 
 .places-found{
@@ -435,3 +440,80 @@ textarea.wmd-input, textarea#wmd-input {
 
 .avatar-pic {
   width: 150px; }
+
+  /* Range SLider */
+
+.range-slider {
+  margin-top: 25px;
+}
+
+.range-slider__range {
+  
+  width: 80%;
+  height: $range-track-height;
+  border-radius: 5px;
+  background: #f2f2f2;
+  outline: none;
+  padding: 0;
+  margin: 0;
+    border-radius: 50%;
+  }
+
+  &::-moz-range-thumb {
+    
+    border: 0;
+    border-radius: 50%;
+    background: $range-handle-color;
+
+
+    
+  }
+
+  
+}
+
+
+// Range Label
+.range-slider__value {
+  display: inline-block;
+  position: relative;
+  width: $range-label-width;
+  color: $shade-0;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: $range-label-color;
+  padding: 5px 10px;
+  margin-left: 8px;
+
+  &:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid $range-label-color;
+    border-bottom: 7px solid transparent;
+    content: '';
+  }
+}
+
+
+// Firefox Overrides
+::-moz-range-track {
+    background: $range-track-color;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer { 
+  border: 0; 
+}
+.space{
+  margin-top: 10px;
+}
+
+.available{
+    border: 0px ;
+}

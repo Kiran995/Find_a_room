@@ -23,33 +23,24 @@
           <input type="checkbox" id="Room" name="feature"
                value="Room" checked />
           <label for="Room">Room</label>
-        </div>
-
-        <div>
+        
           <input type="checkbox" id="Flat" name="feature"
                value="Flat" />
           <label for="Flat">Flat</label>
-        </div>
-
-        <div>
+        
+        
           <input type="checkbox" id="Apartment" name="feature"
                value="Apartment" />
           <label for="Apartment">Apartment</label>
-        </div>
-
-        <div>
+        
           <input type="checkbox" id="House" name="feature"
                value="House" />
           <label for="House">House</label>
-        </div>
-
-        <div>
+        
           <input type="checkbox" id="Land" name="feature"
                value="Land" />
           <label for="Land">Land</label>
-        </div>
-
-        <div>
+        
           <input type="checkbox" id="Land" name="feature"
                value="All" />
           <label for="All">All</label>
@@ -61,50 +52,59 @@
         <input class="input-text" type="text" name="Search" placeholder="Search By Location" style='background-color: white;'>
       </div>
 
-      <div class="tabs">
-        <div class="tab" id="tab1">
-          <a href="#tab1" style='background-color: #26532b; color:white;'>Private Space</a>
-        </div>
-        <div class="tab" id="tab2">
-          <a href="#tab2" style='background-color: #26532b; color:white;'>Shared Space</a>
-        </div>
+     <div class='space'>
+          <input type="checkbox" id="Private" name="Space"
+               value="Private" checked />
+          <label for="Private">Private Space</label>
+        
+          <input type="checkbox" id="Shared" name="Space"
+               value="Shared" />
+          <label for="Shared">Shared Space</label>
       </div>  
-      <div class='open'></div>
-      <label class="mdc-floating-label">Pick a Price Range:</label>
-      <div class="mdc-select">
-
-
-        <select class="mdc-select__native-control">
-          <option value="Price Range" disabled selected></option>
-          <option value="grains">
-            less than 5000
-          </option>
-          <option value="vegetables">
-            5000-12000
-          </option>
-          <option value="fruit">
-            12000-20000
-          </option>
-          <option value="fruit">
-            above 20000
-          </option>
-        </select>
+      
+      <div class="range-slider">
+      <label class="mdc-floating-label">Pick a Price:</label>
+      
+        <input class="range-slider__range" type="range" value="3000" min="1000" max="50000" step="50">
+        <span class="range-slider__value">0</span>
       </div>
+
       <div class='open1'></div>
-      <label class="mdc-floating-label1">Preferences:</label>
 
-      <textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length=""></textarea>
+      <fieldset class='available'>
+        <legend>Amenities </legend>
 
-      <button class="btn waves-effect waves-light" type="submit" name="action" style="margin: 10px; margin-left: 80px; border: 3px solid #26532b; height: 50px; width: 130px;">SEARCH
+        <div>
+          <input type="checkbox" id="Room" name="feature"
+               value="Room" checked />
+          <label for="Room">Wifi</label>
+        
+          <input type="checkbox" id="Flat" name="feature"
+               value="Flat" />
+          <label for="Flat">Television</label>
+        
+        
+          <input type="checkbox" id="Apartment" name="feature"
+               value="Apartment" />
+          <label for="Apartment">Parking</label>
+        
+          <input type="checkbox" id="House" name="feature"
+               value="House" />
+          <label for="House">Laundry</label>
+        
+          <input type="checkbox" id="Land" name="feature"
+               value="Land" />
+          <label for="Land">Hot and Cold Water</label>
+        </div>
+      </fieldset>
+      <fieldset class="pref"> <legend>Any Preferences</legend><textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length=""></textarea></fieldset>
+
+      
+
+      <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right; background-color: #26532b; height: 50px; color: white; width: 130px;">SEARCH
   </button>
 
-  </div>
-
-      <!--The div element for the map -->
-
-  <div class="content-wrapper">
-    <div id="map"></div>
-     <div class="places-found">
+  <div class="places-found">
       <h2 class="sub-title"> Places Found </h2>
       <div class="place"> 
         <img src="./assets/home.jpeg" alt="home"/>
@@ -124,6 +124,14 @@
               <p>Some text description for hte home found </p>
             </div>
   </div>
+
+  </div>
+
+      <!--The div element for the map -->
+
+  <div class="content-wrapper">
+    <div id="map"></div>
+     
     </div>
     
 
@@ -172,6 +180,27 @@
     src="https://maps.googleapis.com/maps/api/js?key=
 AIzaSyCmlYRGM1xqhjWv6MZB-yTEU0ozZyPcTqY
 &callback=initMap">
+  </script>
+  <script type="text/javascript">
+    var rangeSlider = function(){
+  var slider = $('.range-slider'),
+      range = $('.range-slider__range'),
+      value = $('.range-slider__value');
+    
+  slider.each(function(){
+
+    value.each(function(){
+      var value = $(this).prev().attr('value');
+      $(this).html(value);
+    });
+
+    range.on('input', function(){
+      $(this).next(value).html(this.value);
+    });
+  });
+};
+
+rangeSlider();
   </script>
 
 
