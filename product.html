@@ -1,99 +1,573 @@
+<!DOCTYPE html>
 <html>
-
 <head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
 <style type="text/css">
-.shopping-cart {width: 100%; border-top: 1px solid #C3C3C3; border-right: 1px solid #C3C3C3; clear: both;}
-.shopping-cart th {background: #F0F0F0;}
-.shopping-cart th, .shopping-cart td {border-bottom: 1px solid #C3C3C3; border-left: 1px solid #C3C3C3; padding: 3px;}
-.shopping-cart .link {font-size: 90%; white-space: nowrap;}
-.shopping-cart .product {width: 55%}
-.shopping-cart .price {width: 5%;}
-.shopping-cart .quantity {width: 15%;}
-.shopping-cart .quantity input {width: 30px;}
-.shopping-cart .price {width: 20%;}
-.shopping-cart .product-img {border: 1px solid #ccc; background-color: #e9e9e9; padding: 3px; width: 80px; height: 80px; float: left;}
-.shopping-cart .product-img img {max-width:80px;max-height:80px;width:auto;height:auto;}
-.shopping-cart .product-name {margin-left: 100px;}
-.shopping-cart tr.totals {font-weight: bold;}
-.shopping-cart tr.totals a {font-weight: normal;}
-.shopping-cart .quantity-span {text-align: right;}
-.coupon {margin:20px 0 0;text-align:right;}
-.continue-shopping {float:left;margin:20px 0;}
-.checkout-button {float: right; margin: 20px 0; font-weight: bold;}
+
+
+    .nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
+
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 8px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        }
+        .wish-list:hover{
+            background: orange;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+/**********************************************/
+
+
+/*****************globals*************/
+body {
+  font-family: 'open sans';
+}
+.container-fluid{
+    background: #fdfdfd;
+}
+.container-fluid{
+    padding: 15px;
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+}
+
+.tab-pane img{
+    height: 400px;
+    width: 400px;
+}
+.preview-thumbnail img{
+    height: 80px;
+    width: 100px;
+}
+
+
+
+.preview-thumbnail.nav-tabs {
+  border: none;
+  margin-top: 15px; }
+  .preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%; }
+    .preview-thumbnail.nav-tabs li img {
+      max-width: 100%;
+      display: block; }
+    .preview-thumbnail.nav-tabs li a {
+      padding: 0;
+      margin: 0; }
+    .preview-thumbnail.nav-tabs li:last-of-type {
+      margin-right: 0; }
+
+.tab-content {
+  overflow: hidden; }
+  .tab-content img {
+    width: 100%;
+   
+     }
+
+.card {
+  margin-top: 50px;
+  background: white;
+  padding: 3em;
+  line-height: 1.5em; }
+
+.action{
+    padding-top: 11px;
+    text-transform: UPPERCASE;
+  font-weight: bold;
+}
+
+
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; }
+
+.checked, .price span {
+  color: #ff9f1a; }
+
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px; }
+
+.product-title {
+  margin-top: 0; }
+
+.size {
+  margin-right: 10px; }
+  .size:first-of-type {
+    margin-left: 40px; }
+
+.room{
+border: 1px solid orange;
+border-radius: 5%; 
+color: white; 
+background: orange; 
+padding: 10px;
+
+}
+.room-info{
+    font-family: 'open sans', sans-serif;
+
+}
+.amenities{
+    padding: 20px;
+    color: white;
+    background: orange;
+    border-radius: 7%;
+}
+
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px; }
+  .color:first-of-type {
+    margin-left: 20px; }
+
+.add-to-cart, .like {
+  background: #ff9f1a;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease; }
+  .add-to-cart:hover, .like:hover {
+    background: #b36800;
+    color: #fff; }
+
+.not-available {
+  text-align: center;
+  line-height: 2em; }
+  .not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff; }
+
+.orange {
+  background: #ff9f1a; }
+
+.green {
+  background: #85ad00; }
+
+.blue {
+  background: #0076ad; }
+
+.tooltip-inner {
+  padding: 1.3em; }
+
+.map{
+    background: url("http://www.sfmission.com/gallery_files/site_pics/Asia/Nepal/Kathmandu/Maps_and_Guides/Kathmandu-google-maps.jpg");
+    height: 300px;
+
+}
+
+.related-category{
+    text-align: center;
+}
+.col-md-3{
+    text-align: center;
+
+}
+
+
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+.item .row img{
+    height: 200px;
+    width: 250px;
+}
+.col-md-3:hover{
+    color: orange;
+}
+/* The controlsy */
+.carousel-control {
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+.carousel-control.right {
+    right: -12px;
+}
+/* The indicators */
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -10px;
+    margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+    background: #cecece;
+}
+.carousel-indicators .active {
+background: #428bca;
+}
+
+.item .row .col-md-3:hover button{
+    display: block;
+    height: 40px;
+    width: 60%;
+    top: 30%;
+    left: 20%;
+    position: absolute;
+    background: orange;
+    text-decoration: none;
+}
+.item .row .col-md-3:hover a{
+    color: white;
+}
+
+.item .row .col-md-3 button{
+    
+    border-style: none;
+    display: none;
+    color: white;
+}
+
+.footer-wrapper li{
+
+    text-decoration: none;
+    display: inline;
+    padding: 0px 80px;
+}
+.clearfix:after {
+       content: " "; /* Older browser do not support empty content */
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+}
+
 </style>
-</head>
-<body>
-<h1>Shopping Cart</h1>
-{if #cart.updateForm.errors}
-  <ul class="errors">
-  {loop items="#cart.updateForm.errors" value="error"}
-    <li>{#error.message}</li>
-  {/loop}
-  </ul>
-{/if}
-{#cart.updateForm.tag.open}
-  <a href="{#cart.urls.continueShopping}" class="continue-shopping">Continue Shopping</a>
-  <a href="{#cart.urls.checkout}" class="checkout-button">Checkout</a>
-  <table cellspacing="0" class="shopping-cart">
-    <thead>
-      <tr class="headings">
-        <th class="link">&nbsp;</td>
-        <th class="product">Item</td>
-        <th class="price">Price</td>
-        <th class="quantity">Quantity</td>
-        <th class="price">Total</td>
-      </tr>
-    </thead>
-    <tbody>
-    {loop items="#cart.products" value="product"}
-      <tr> 
-        <td class="link"><label>{#product.fields.remove.tag} remove</label></td>
-        <td class="product">
-          <div class="product-img"><a href="{#product.url}">{#product.primaryImages.thumb.tag}</a></div>
-          <div class="product-name">
-            <a href="{#product.url}">{#product.productName}</a>
-            {loop items="#product.options" value="option"}
-              <br />{#option.label}: {#option.value}
-            {/loop}
-          </div>
-        </td>
-        <td class="price">
-          {#product.currentPrice.value}{if #product.pricePerUnit exists && #product.pricePerUnit != "None"} / {#product.pricePerUnit}{/if}
-        </td>
-        <td class="quantity">
-          {#product.fields.quantity.tag}{#product.fields.partialQuantity.tag}
-        </td>
-        <td class="price">{#product.totalPrice.value}</td>
-      </tr>
-    {/loop} 
-    {if #cart.coupons}
-      <tr>
-        <td class="quantity-span" colspan="4">Subtotal</td>
-        <td class="price">{#cart.cartTotalBeforeDiscounts.value}</td>
-      </tr>
-      {loop items="#cart.coupons" value="coupon"}
-        <tr>
-          <td class="quantity-span" colspan="4">{#coupon.name} ({#coupon.code})</td>
-          <td class="price">-{#coupon.savingsValue}</td>
-        </tr>
-      {/loop}
-    {/if}
- 
-      <tr class="totals">
-        <td colspan="2"><input type="submit" name="submit" value="Update cart" /></td>
-        <td class="quantity-span" colspan="2">Total</td>
-        <td class="price">{#cart.cartTotal.value}</td>
-      </tr> 
-    </tbody>
-  </table>
-{#cart.updateForm.tag.close}
-{#cart.updateForm.tag.open}
-  <div class="coupon">
-    Have a coupon? {#cart.updateForm.fields.coupon.tag} <input type="submit" value="Apply" />
-  </div>
-{#cart.updateForm.tag.close}
-<div style="clear: both;"></div>
-<a href="{#cart.urls.continueShopping}" class="continue-shopping">Continue Shopping</a>
-<a href="{#cart.urls.checkout}" class="checkout-button">Checkout</a>
-</body>
+
+    
+  </head>
+  <body>
+
+  <div class="main">
+  <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+      
+      
+
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1 style="text-align: center; padding-bottom: 10px"><strong><span style="color: orange">Building</span> Details</strong></h1>
+
+            <div class="container-fluid">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+                        
+                        <div class="preview-pic tab-content">
+                          <div class="tab-pane active" id="pic-1"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/897/89712052.jpg" /></div>
+                          <div class="tab-pane" id="pic-2"><img src="https://q.bstatic.com/images/hotel/max1024x768/107/107770077.jpg" /></div>
+                          <div class="tab-pane" id="pic-3"><img src="https://t-ec.bstatic.com/images/hotel/max500/113/113244581.jpg" /></div>
+                          <div class="tab-pane" id="pic-4"><img src="https://i.pinimg.com/originals/8f/23/8b/8f238bea49a3708841d59f590c474e36.jpg" /></div>
+                          <div class="tab-pane" id="pic-5"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/989/98908057.jpg" /></div>
+                        </div>
+
+
+                        <ul class="preview-thumbnail nav nav-tabs">
+                          <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/897/89712052.jpg" /></a></li>
+                          <li><a data-target="#pic-2" data-toggle="tab"><img src="https://q.bstatic.com/images/hotel/max1024x768/107/107770077.jpg" /></a></li>
+                          <li><a data-target="#pic-3" data-toggle="tab"><img src="https://t-ec.bstatic.com/images/hotel/max500/113/113244581.jpg" /></a></li>
+                          <li><a data-target="#pic-4" data-toggle="tab"><img src="https://i.pinimg.com/originals/8f/23/8b/8f238bea49a3708841d59f590c474e36.jpg" /></a></li>
+                          <li><a data-target="#pic-5" data-toggle="tab"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/989/98908057.jpg" /></a></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">Building - BS106</h3>
+                        <h5><span class="fas fa-map-marker-alt"></span><strong> Location: </strong>Baneshwor, Kathmandu</h5>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="review-no">41 reviews</span>
+                        </div>
+                        <h4 class="price">current price: <span>Rs. 18,000</span></h4>
+                        Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.<br/>
+                        
+                        
+                        <!-- <p >
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet                       
+                        </p> -->
+                        <h4 class="sizes">Rooms:</h4>
+                            <i class="room fa fa-bed" data-toggle="tooltip" title="small"><span class="room-info"> 3 Bedrooms</span></i>
+                            <i class="room fas fa-door-open" data-toggle="tooltip" title="xtra large"><span class="room-info"> 1 Hall</span></i>
+                            <i class="room fas fa-utensils" data-toggle="tooltip" title="medium">
+                            <span class="room-info"> 1 Kitchen</span></i>
+                            <i class="room fa fa-bath" data-toggle="tooltip" title="large"><span class="room-info"> 1 Bathroom </span></i>
+                            
+                        
+                        <h4 class="colors" style="padding-top: 8px; padding-bottom: 8px">Amenities:<br/><br/>
+                           
+                            <span class="amenities fa fa-wifi"></span>
+                            <span class="amenities fa fa-tint"></span>
+                            <span class="amenities fa fa-car"></span>
+                            <span class="amenities fa fa-tty"></span>
+                            <span class="amenities fa fa-bolt"></span>
+                            <span class="amenities fa fa-paw"></span>
+                           
+                        </h4>
+                        <!-- <div class="action">Gorin:
+                             <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                            <span class="color green"></span>
+                            <span class="color blue"></span>
+                        </div> -->
+                        
+                        <div class="action">
+                            <button class="add-to-cart btn btn-default" type="button">book now</button>
+                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description" style="padding-top: 30px;">
+
+            <h4><span class="action"> description: </h4></span>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br/>
+            <li>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos</li>
+            <li>debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</li>
+            <li>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos</li>
+            <li>debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</li>
+            <li>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos</li>
+            <li>debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</li>
+                            
+            </span>
+                
+        </div>
+        <div class="map-location" style="padding-top: 30px">
+        <h4><span class="action"> location: </span></h4>
+        <div class="map">
+            
+        </div>
+        </div></h4>
+                
+            </div>
+            
+    </div>
+
+    <div class="related-category">
+    <h3>Related Spaces near Same Location</h3>
+
+    <div class="row">
+        <div class="col-md-12">
+                <div id="Carousel" class="carousel slide">
+                 
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                </ol>
+                 
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    
+                <div class="item active">
+                    <div class="row">
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://www.sorrentoflats.com/images/contents/rooms/deluxe.jpg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                      <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjz0B9TDnoQ9_rul1yYK_DE7yj20pButXo209KhE4AS0Z7XW5" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                      <h4><strong>Building B608</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://www.bebvalentinasorrento.com/wp-content/uploads/2016/06/sorrento-home.jpg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                        <h4><strong>Building B780</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p>
+                      </div>
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://www.sorrentoflats.com/images/contents/home/rooms.jpg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                      <h4><strong>Building B543</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p>
+                      </div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                </div><!--.carousel-inner-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->
+                 
+        </div>
+     
+    </div></div></div>
+    <br/><br/></div>
+
+
+    <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px">
+    The Hipsters Ⓒ 2018<br/><br/>
+    <li>
+
+    About Us </li>
+
+<li>Terms Of Use</li>
+
+
+<li>Privacy Policies</li>
+        
+    </div>
+
+</div>
+
+
+
+  </body>
+
 </html>
+
+
+

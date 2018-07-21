@@ -849,3 +849,92 @@ label:hover:before {
 [disabled].noUi-origin,[disabled] .noUi-handle {
   cursor: not-allowed;
 }
+
+/****************************************************************************/
+
+.first-section {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-gap: 50px;
+    padding: 30px;
+}
+
+
+.first-section .first-block{
+    display:inline-block;
+    height: 300px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+
+}
+.first-section .first-block img{
+    width: 300px;
+    height: 300px;
+    opacity: 0.9;
+    transition: 200ms;
+    transition-timing-function:ease-out;
+}
+.first-section .first-block .content{
+    height: 290px;
+    width: 260px;
+    text-align: right;
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+    transform: translate3d(10px,0,0);
+    transition: 200ms;
+    transition-timing-function: ease-out;
+    float: left;
+}
+
+.first-section .first-block .block-info{
+    float: right;
+    margin-right: 200px;
+}
+.first-section .first-block .block-title{
+    width: 65px;
+    background: orange;
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+
+}
+.first-section .first-block .content .F{
+    display:inline-block;
+    font-size: 1.3em;
+    font-weight:900;
+    color: black;
+    z-index: 2;
+}
+.first-section .first-block .content .block-subtitle{   
+    /*NEW ARRIVALS*/
+    display: none;
+    height: 15%;
+    width: 95%;
+    margin-top: 3%;
+    transform: translate3d(10px,0,0);
+    transition: 200ms;
+    transition-timing-function: ease-out;
+    letter-spacing: 6px;
+    color: blue;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+.first-section .first-block:hover .block-subtitle{
+    display: block;
+    transform: translate3d(0px,0,0);
+}
+.first-section .first-block:hover .content{
+    transform: translate3d(0px,0,0);
+}
+.first-section .first-block:hover img{
+    transform: translate3d(-30px,0,0);
+    opacity: 0.8;
+    filter: sepia(50%);
+}
+
