@@ -27,9 +27,9 @@
 
 
 button {
-  background-color: #26532b; /* Green */
+
     border: none;
-    color: white;
+    color: black;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -66,6 +66,7 @@ button {
 
 
 .vertical-menu{
+
   padding: 10px;
   margin-top: 60px;
   width: 60%;
@@ -74,6 +75,7 @@ button {
   overflow-y: auto;
   min-height: 700px;
   border-right: 1px solid #ddd;
+  
   
 
 }
@@ -139,7 +141,7 @@ button {
 }
 
 .form-style-5 .number {
-    background: #1abc9c;
+    background: #df6e21;
     color: #fff;
     height: 30px;
     width: 30px;
@@ -152,11 +154,13 @@ button {
     border-radius: 15px 15px 15px 0px;
 }
 
-.form-style-1 li {
+.form-style-1 {
+
     padding: 0;
     display: block;
     list-style: none;
     margin: 10px 0 0 0;
+    margin-left: 120px;
 }
 .form-style-1 label{
     margin:0 0 3px 0;
@@ -203,6 +207,7 @@ select{
 }
 .form-style-1 .field-divided{
     width: 49%;
+    margin-bottom: 30px;
 }
 
 .form-style-1 .field-long{
@@ -215,17 +220,20 @@ select{
     height: 100px;
 }
 .form-style-1 input[type=submit], .form-style-1 input[type=button]{
-    background: #4B99AD;
+    background: none;
+
     padding: 8px 15px 8px 15px;
-    border: none;
-    color: #fff;
+    border: 1px solid #df6e21;
+    color: #df6e21;
 }
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-    background: #4691A4;
+    background: #df6e21;
     box-shadow:none;
+    color:white;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
 }
 .form-style-1 .required{
     color:red;
 }
+

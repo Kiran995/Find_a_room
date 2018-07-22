@@ -28,36 +28,75 @@
     <div class="form-style-5">
 <form>
 <fieldset>
-<legend><span class="number">1</span> Candidate Info</legend>
+<legend><span class="number">1</span> Personal Info</legend>
+<form>
 <ul class="form-style-1">
-    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+    <li><label>Name </label><input type="text" name="field1" class="field-divided" placeholder="Name" style="margin-bottom:25px;"/></li>
+    <li><label>Contact Number <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Contact" style="margin-bottom:25px;"/>&nbsp;</li>
     <li>
-        <label>Email <span class="required">*</span></label>
-        <input type="email" name="field3" class="field-long" />
+        <label>Email </label>
+        <input type="email" name="field3" class="field-divided" placeholder="Email" style="margin-bottom:25px;"/>
     </li>
+  </form>
+</fieldset>
+
+<fieldset>
+<legend><span class="number">2</span> Property Info</legend>
+<form>
+  <ul class="form-style-1">
     <li>
-        <label>Subject</label>
-        <select name="field4" class="field-select">
-        <option value="Advertise">Advertise</option>
-        <option value="Partnership">Partnership</option>
-        <option value="General Question">General</option>
+        <label>Choose your Property Type</label>
+        <select name="field4" class="field-divided">
+        <option value="Advertise">Room</option>
+        <option value="Partnership">Apartment</option>
+        <option value="General Question">House</option>
         </select>
     </li>
+    <li style="margin-bottom:30px;">
+      <label>No of:</label>
+      <input type="text" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:100px;"/>
+      <input type="email" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:100px;"/>
+      <input type="text" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:100px;"/>
+      <input type="url" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:100px;"/>
+
+    </li>
     <li>
-        <label>Your Message <span class="required">*</span></label>
+      
+    </li>
+    <li>
+        <label>Duration (From - To)</label>
+        <input type="date" name="field3" class="field-divided" placeholder="From" style="margin-bottom:25px;"/>&nbsp;<input type="date" name="field3" class="field-divided" placeholder="To" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Description <span class="required">*</span></label>
         <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
     </li>
     <li>
-        <input type="submit" value="Submit" />
+        <label style="margin-top:25px;">Photos <span class="required">*</span></label>
+        <button style="height: 200px;border: 1px solid blue;">Drag your images here</button>
     </li>
-</ul>     
+    
+</ul>
+</form>     
 </fieldset>
+
 <fieldset>
-<legend><span class="number">2</span> Additional Info</legend>
-<textarea name="field3" placeholder="About Your School"></textarea>
-</fieldset>
-<input type="submit" value="Apply" />
-</form>
+<legend><span class="number">3</span> Your Preference</legend>
+<form>
+  <ul class="form-style-1">
+    <li>
+        <label>Preferences <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li style="margin-top:25px; float: right">
+        <input type="submit" value="Submit" />
+  </li>
+  </ul>
+
+  
+</form>     
+</fieldset>  
+
 </div>
   </div>
 
