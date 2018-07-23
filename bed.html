@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<style type="text/css">
+
+
+    .nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
+
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 8px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        }
+        .wish-list:hover{
+            background: orange;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+/**********************************************/
+
+
+/*****************globals*************/
+body {
+  font-family: 'open sans';
+}
+.container-fluid{
+    background: #fdfdfd;
+}
+.container-fluid{
+    padding: 15px;
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+}
+
+.tab-pane img{
+    height: 400px;
+    width: 400px;
+}
+.preview-thumbnail img{
+    height: 80px;
+    width: 100px;
+}
+
+
+
+.preview-thumbnail.nav-tabs {
+  border: none;
+  margin-top: 15px; }
+  .preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%; }
+    .preview-thumbnail.nav-tabs li img {
+      max-width: 100%;
+      display: block; }
+    .preview-thumbnail.nav-tabs li a {
+      padding: 0;
+      margin: 0; }
+    .preview-thumbnail.nav-tabs li:last-of-type {
+      margin-right: 0; }
+
+.tab-content {
+  overflow: hidden; }
+  .tab-content img {
+    width: 100%;
+   
+     }
+
+.card {
+  margin-top: 50px;
+  background: white;
+  padding: 3em;
+  line-height: 1.5em; }
+
+.action{
+    padding-top: 11px;
+    text-transform: UPPERCASE;
+  font-weight: bold;
+}
+
+
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; }
+
+.checked, .price span {
+  color: #ff9f1a; }
+
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px; }
+
+.product-title {
+  margin-top: 0; }
+
+.size {
+  margin-right: 10px; }
+  .size:first-of-type {
+    margin-left: 40px; }
+
+.room{
+border: 1px solid orange;
+border-radius: 5%; 
+color: white; 
+background: orange; 
+padding: 10px;
+
+}
+.room-info{
+    font-family: 'open sans', sans-serif;
+
+}
+.amenities{
+    padding: 20px;
+    color: white;
+    background: orange;
+    border-radius: 7%;
+}
+
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px; }
+  .color:first-of-type {
+    margin-left: 20px; }
+
+.add-to-cart, .like {
+  background: #ff9f1a;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease; }
+  .add-to-cart:hover, .like:hover {
+    background: #b36800;
+    color: #fff; }
+
+.not-available {
+  text-align: center;
+  line-height: 2em; }
+  .not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff; }
+
+.orange {
+  background: #ff9f1a; }
+
+.green {
+  background: #85ad00; }
+
+.blue {
+  background: #0076ad; }
+
+.tooltip-inner {
+  padding: 1.3em; }
+
+.map{
+    background: url("http://www.sfmission.com/gallery_files/site_pics/Asia/Nepal/Kathmandu/Maps_and_Guides/Kathmandu-google-maps.jpg");
+    height: 300px;
+
+}
+
+.related-category{
+    text-align: center;
+}
+.col-md-3{
+    text-align: center;
+
+}
+
+
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+.item .row img{
+    height: 200px;
+    width: 250px;
+}
+.col-md-3:hover{
+    color: orange;
+}
+/* The controlsy */
+.carousel-control {
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+.carousel-control.right {
+    right: -12px;
+}
+/* The indicators */
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -10px;
+    margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+    background: #cecece;
+}
+.carousel-indicators .active {
+background: #428bca;
+}
+
+.item .row .col-md-3:hover button{
+    display: block;
+    height: 40px;
+    width: 60%;
+    top: 30%;
+    left: 20%;
+    position: absolute;
+    background: orange;
+    text-decoration: none;
+}
+.item .row .col-md-3:hover a{
+    color: white;
+}
+
+.item .row .col-md-3 button{
+    
+    border-style: none;
+    display: none;
+    color: white;
+}
+
+.footer-wrapper li{
+
+    text-decoration: none;
+    display: inline;
+    padding: 0px 80px;
+}
+.clearfix:after {
+       content: " "; /* Older browser do not support empty content */
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+}
+
+
+</style>
+
+    
+  </head>
+  <body>
+
+  <div class="main">
+  <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+      
+      
+
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1 style="text-align: center; padding-bottom: 10px"><strong><span style="color: orange">Furniture</span> Details</strong></h1>
+
+            <div class="container-fluid">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+                        
+                        <div class="preview-pic tab-content">
+                          <div class="tab-pane active" id="pic-1"><img src="bed.png" /></div>
+                        </div>
+                        
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">Bed (6*3)</h3>
+                        
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="review-no">41 reviews</span>
+                        </div>
+                        <h4 class="price">current price: <span>Rs. 15,000</span></h4>
+
+                        <h4 class='sizes'>Like Brand New</h4>
+                        Used for 6 months. Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.<br/>
+                        
+                        
+                        <!-- <p >
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet                       
+                        </p> -->
+                       
+                            
+                            
+                  
+                        <!-- <div class="action">Gorin:
+                             <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                            <span class="color green"></span>
+                            <span class="color blue"></span>
+                        </div> -->
+                        
+                        <div class="action">
+                            <button class="add-to-cart btn btn-default" type="button">BUY NOW</button>
+                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description" style="padding-top: 30px;">
+
+            <h4><span class="action"> description: </h4></span>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br/>
+            <li>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos</li>
+            <li>debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</li>
+            <li>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos</li>
+            <li>debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</li>
+            <li>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos</li>
+            <li>debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</li>
+                            
+            </span>
+                
+        </div>
+        <div class="map-location" style="padding-top: 30px">
+        <h4><span class="action"> Buyer's Speak: </span></h4>
+        <div>
+          <textarea name="Text1" cols="40" rows="5" style="width: 100%;"></textarea>
+        </div>
+
+
+        </div></h4>
+                
+            </div>
+            
+    </div>
+
+    <div class="related-category">
+    <h3>SEE MORE</h3>
+
+    <div class="row">
+        <div class="col-md-12">
+                <div id="Carousel" class="carousel slide">
+                 
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                </ol>
+                 
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    
+                <div class="item active">
+                    <div class="row">
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="one.jpg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                      <h4><strong>SOFA</strong></h4>
+                      </div>
+
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="two.jpeg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                      <h4><strong>DINNIG SET</strong></h4>
+                      </div>
+
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="three.jpg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                        <h4><strong>BED</strong></h4>
+                      
+                      </div>
+                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="four.jpg" alt="Image" style="max-width:100%;"></a>
+                      <button><a href="#">VIEW MORE</a></button>
+                      <h4><strong>DRAWER</strong></h4>
+                      
+                      </div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+                        <h4><strong>Building B678</strong></h4>
+                      <p><span class="fas fa-map-marker-alt"></span> New Baneswor, Kathmandu</p></div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                </div><!--.carousel-inner-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->
+                 
+        </div>
+     
+    </div></div></div>
+    <br/><br/></div>
+
+
+    <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px">
+    The Hipsters Ⓒ 2018<br/><br/>
+    <li>
+
+    About Us </li>
+
+<li>Terms Of Use</li>
+
+
+<li>Privacy Policies</li>
+        
+    </div>
+
+</div>
+
+
+
+  </body>
+
+</html>
+
+
+

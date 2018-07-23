@@ -3,30 +3,39 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Find a room </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
     <link rel='stylesheet' type='text/css' href='poststyle.css'>
   </head>
   <body>
-    <div class = "navbar clearfix">
-    <div class="left-navbar clearfix">
-      
-      <div class = "logo">
-        <span>Logo</span>
-      </div>
-      <button class = "button list-button"> List your Property</button>
-
-    </div>
-    <div class = "right-navbar clearfix">
-      
-      <button class="button register">Register</button>
-      <button class="button login">Login  </button>
-    </div>
-
-  </div>
+    <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
 
   <div class='vertical-menu'>
 
     <div class="form-style-5">
-<form>
+<form style="margin-top:20px;">
 <fieldset>
 <legend><span class="number">1</span> Personal Info</legend>
 
@@ -105,7 +114,7 @@
   
 
     <div class="map-wrapper">
-      <legend> Locate your property in the map (Optional)</legend>
+      <legend style="margin-top:12px;"> Locate your property in the map (Optional)</legend>
     <div id="map">
 
     </div>

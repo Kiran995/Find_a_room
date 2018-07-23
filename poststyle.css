@@ -70,7 +70,99 @@ button {
 }
 
 
+.nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
 
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 0px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        }
+        .wish-list:hover{
+            background: orange;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+/**********************************************/
+
+
+/*****************globals*************/
+body {
+  font-family: 'open sans';
+}
 .vertical-menu{
 
   padding: 10px;
