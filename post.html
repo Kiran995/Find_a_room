@@ -29,7 +29,7 @@
 <form>
 <fieldset>
 <legend><span class="number">1</span> Personal Info</legend>
-<form>
+
 <ul class="form-style-1">
     <li><label>Name </label><input type="text" name="field1" class="field-divided" placeholder="Name" style="margin-bottom:25px;"/></li>
     <li><label>Contact Number <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Contact" style="margin-bottom:25px;"/>&nbsp;</li>
@@ -37,12 +37,12 @@
         <label>Email </label>
         <input type="email" name="field3" class="field-divided" placeholder="Email" style="margin-bottom:25px;"/>
     </li>
-  </form>
+  
 </fieldset>
 
 <fieldset>
 <legend><span class="number">2</span> Property Info</legend>
-<form>
+
   <ul class="form-style-1">
     <li>
         <label>Choose your Property Type</label>
@@ -54,14 +54,14 @@
     </li>
     <li style="margin-bottom:30px;">
       <label>No of:</label>
-      <input type="text" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:100px;"/>
-      <input type="email" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:100px;"/>
-      <input type="text" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:100px;"/>
-      <input type="url" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:100px;"/>
+      <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:100px;"/>
+      <input type="number" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:100px;"/>
+      <input type="number" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:100px;"/>
+      <input type="number" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:100px;"/>
 
     </li>
     <li>
-      
+      <label>Price <span class="required">*</span></label><input type="number" name="field1" class="field-divided" placeholder="Price" style="margin-bottom:25px;"/>
     </li>
     <li>
         <label>Duration (From - To)</label>
@@ -77,12 +77,12 @@
     </li>
     
 </ul>
-</form>     
+    
 </fieldset>
 
 <fieldset>
 <legend><span class="number">3</span> Your Preference</legend>
-<form>
+
   <ul class="form-style-1">
     <li>
         <label>Preferences <span class="required">*</span></label>
@@ -94,14 +94,18 @@
   </ul>
 
   
-</form>     
+    
 </fieldset>  
-
+</form> 
 </div>
   </div>
+  
 
     <div class="map-wrapper">
-    <div id="map"></div>
+      <legend> Locate your property in the map (Optional)</legend>
+    <div id="map">
+
+    </div>
      
     </div>
     
