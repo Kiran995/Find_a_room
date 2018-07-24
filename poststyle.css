@@ -319,13 +319,14 @@ select{
 }
 .form-style-1 input[type=submit], .form-style-1 input[type=button]{
     background: none;
+    font-size:18px;
 
     padding: 8px 15px 8px 15px;
-    border: 1px solid #df6e21;
-    color: #df6e21;
+    border: 1px solid #2096ba;
+    color: #2096ba;
 }
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-    background: #df6e21;
+    background: #2096ba;
     box-shadow:none;
     color:white;
     -moz-box-shadow:none;

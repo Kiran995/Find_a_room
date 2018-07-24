@@ -14,6 +14,94 @@
 
 <style type="text/css">
 
+.nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
+
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 8px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        }
+        .wish-list:hover{
+            background: orange;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/*****************globals*************/
+
+
     .sel{
       margin: 10px;
       display: inline-flex;
@@ -192,7 +280,7 @@ padding: 10px;
 
 }
 .room-info{
-    font-family: 'open sans', sans-serif;
+    font-family: 'open sans';
 
 }
 .amenities{
@@ -229,7 +317,7 @@ padding: 10px;
   text-align: center;
   line-height: 2em; }
   .not-available:before {
-    font-family: fontawesome;
+    font-family: 'open sans';
     content: "\f00d";
     color: #fff; }
 
@@ -368,51 +456,112 @@ form.example::after {
     clear: both;
     display: table;
 }
+.search-bar {
+  position: relative;
+  
+}
+
+.search-bar.active .input-text {
+  max-width: 100%;
+  height: 50%;
+  border: 1px solid #ccc;
+  background: #df6e21;
+}
+
+.search-bar .icon {
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 13px 15px 13px 11px;
+}
+
+.search-bar .input-text {
+  max-width: 0;
+  border: 0;
+  border-color: #df6e21;
+  height: 20px;
+  padding: 8px 6px 8px 35px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+input[type=text]{
+  margin: 10px;
+  width:88%;
+  border:2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:0.3s;
+}
+
+input[type=text]:focus{
+  border-color:#df6e21;
+  box-shadow: 0 0 8px 0 #df6e21;
+}
 
 </style>
 
     
   </head>
   <body>
-    <div class="sel">
-    <div>
-      <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-      <input type="text" placeholder="Search.." name="search2">
-      <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-    <div class="input-field col s12">
-    <select>
-      <option value="" disabled selected>Choose your Category</option>
-      <option value="1">Bed</option>
-      <option value="2">Table</option>
-      <option value="3">Drawer</option>
-      <option value="3">Other</option>
-      <option value="3">All</option>
-    </select>
+    <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+
+        
+    <div class="sel" style="margin-top:70px; float:right;">
+      <h1 style="margin-top: 5px;margin-right: 125px;"> Do your best deal with us</h1>
+      <div class='search-bar active'>
+        <i class="icon fa fa-search" style="margin-top:2px;"></i>
+        <input class="input-text" type="text" name="Search" placeholder="Search Your Category" style='background-color: white; height:40px;'>
+      </div>
+    <div class='search-bar active' style="padding-top: 8px;">
+        <i class="icon fa fa-money-bill-alt " style="margin-top:2px;"></i>
+        <input class="input-text" type="number" name="Search" placeholder="Price" style='background-color: white; height:40px;'>
+      </div>
     </div>
     </div>
 
-  <div class="item">
-      <div class="row">
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="one.jpg" alt="Image" style="max-width:100%;"></a>
-        <button><a href="#">VIEW MORE</a></button>
+  <div class="item" >
+      <div class="row" style="padding-top:155px;">
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/one.jpg" alt="Image" style="max-width:100%;"></a>
+          
+        <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>SOFA</strong></h4>
+        <h4><strong>PRICE: Rs. 4000</strong></h4>
         </div>
 
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="two.jpeg" alt="Image" style="max-width:100%;"></a>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/two.jpeg" alt="Image" style="max-width:100%;"></a>
         <button><a href="#">VIEW MORE</a></button>
         <h4><strong>DINNIG SET</strong></h4>
+        <h4><strong>PRICE: Rs. 4000</strong></h4>
         </div>
 
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="three.jpg" alt="Image" style="max-width:100%;"></a>
-        <button><a href="#">VIEW MORE</a></button>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/bed.png" alt="Image" style="max-width:100%;"></a>
+        <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
           <h4><strong>BED</strong></h4>
+          <h4><strong>PRICE: Rs. 4000</strong></h4>
         
         </div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="four.jpg" alt="Image" style="max-width:100%;"></a>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/four.jpg" alt="Image" style="max-width:100%;"></a>
         <button><a href="#">VIEW MORE</a></button>
         <h4><strong>DRAWER</strong></h4>
+        <h4><strong>PRICE: Rs. 4000</strong></h4>
         
         </div>
       </div><!--.row-->
@@ -420,24 +569,28 @@ form.example::after {
 
    <div class="item">
       <div class="row">
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="one.jpg" alt="Image" style="max-width:100%;"></a>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/one.jpg" alt="Image" style="max-width:100%;"></a>
         <button><a href="#">VIEW MORE</a></button>
         <h4><strong>SOFA</strong></h4>
+        <h4><strong>PRICE: Rs. 4000</strong></h4>
         </div>
 
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="two.jpeg" alt="Image" style="max-width:100%;"></a>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/two.jpeg" alt="Image" style="max-width:100%;"></a>
         <button><a href="#">VIEW MORE</a></button>
         <h4><strong>DINNIG SET</strong></h4>
+        <h4><strong>PRICE: Rs. 4000</strong></h4>
         </div>
 
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="three.jpg" alt="Image" style="max-width:100%;"></a>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/bed.png" alt="Image" style="max-width:100%;"></a>
         <button><a href="#">VIEW MORE</a></button>
           <h4><strong>BED</strong></h4>
+          <h4><strong>PRICE: Rs. 4000</strong></h4>
         
         </div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="four.jpg" alt="Image" style="max-width:100%;"></a>
+        <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/four.jpg" alt="Image" style="max-width:100%;"></a>
         <button><a href="#">VIEW MORE</a></button>
         <h4><strong>DRAWER</strong></h4>
+        <h4><strong>PRICE: Rs. 4000</strong></h4>
         
         </div>
       </div><!--.row-->
