@@ -1,0 +1,351 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<style type="text/css">
+
+.nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
+
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 8px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        }
+        .wish-list:hover{
+            background: orange;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/*****************globals*************/
+body{
+    position: absolute;
+}
+
+.vertical-menu{
+
+  padding: 10px;
+  margin-top: 60px;
+  width: 100%;
+  float: left;
+  height: 100vh;
+  box-sizing: border-box;
+  
+
+}
+
+.vertical-menu a{
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover{
+  background-color: #ccc;
+}
+
+.vertical-menu a.active{
+  background-color: #26532b;
+  color:white;
+  margin-bottom: 5px;
+}
+
+/* form */
+.form-style-5{
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-style-5 .number {
+    background: #df6e21;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-1 {
+
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+    margin-left: 120px;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-select{
+    width: 100%;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    background: none;
+    font-size:18px;
+
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #2096ba;
+    color: #2096ba;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #2096ba;
+    box-shadow:none;
+    color:white;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:red;
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+    <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+
+    <div class='vertical-menu'>
+
+    <div class="form-style-5">
+<form>
+<fieldset>
+<legend><span class="number">1</span> Personal Info</legend>
+
+<ul class="form-style-1">
+    <li><label>Name </label><input type="text" name="field1" class="field-divided" placeholder="Name" style="margin-bottom:25px;"/></li>
+    <li><label>Contact Number <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Contact" style="margin-bottom:25px;"/>&nbsp;</li>
+    <li>
+        <label>Email </label>
+        <input type="email" name="field3" class="field-divided" placeholder="Email" style="margin-bottom:25px;"/>
+    </li>
+  
+</fieldset>
+
+<fieldset>
+<legend><span class="number">2</span> Property Info</legend>
+
+  <ul class="form-style-1">
+    <li>
+        <label>Choose your Property Type</label>
+        <select name="field4" class="field-divided">
+        <option value="Advertise">Room</option>
+        <option value="Partnership">Apartment</option>
+        <option value="General Question">House</option>
+        </select>
+    </li>
+    <li>
+      <label>Location <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Location" style="margin-bottom:25px;"/>
+    </li>
+    <li style="margin-bottom:30px;">
+      <label>No of:</label>
+      <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:100px;"/>
+      <input type="number" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:100px;"/>
+      <input type="number" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:100px;"/>
+      <input type="number" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:100px;"/>
+
+    </li>
+    <li>
+      <label>Price <span class="required">*</span></label><input type="number" name="field1" class="field-divided" placeholder="Price" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Duration (From - To)</label>
+        <input type="date" name="field3" class="field-divided" placeholder="From" style="margin-bottom:25px;"/>&nbsp;<input type="date" name="field3" class="field-divided" placeholder="To" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Description <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li>
+        <label style="margin-top:25px;">Photos <span class="required">*</span></label>
+        <button style="height: 200px;border: 1px solid blue;">Drag your images here</button>
+    </li>
+    
+</ul>
+    
+</fieldset>
+
+<fieldset>
+<legend style="margin-top:20px"><span class="number">3</span> Your Preference</legend>
+
+  <ul class="form-style-1">
+    <li>
+        <label>Preferences <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li style="margin-top:25px; float: right">
+        <input type="submit" value="Submit" />
+  </li>
+  </ul>
+
+  
+    
+</fieldset>  
+</form> 
+</div>
+  </div>
+
+</body>
+
+</html>
