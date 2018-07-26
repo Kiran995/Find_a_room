@@ -8,8 +8,20 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="jquery.js"></script>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery1.12.4/jquery.min,\.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 <style type="text/css">
+
+html *{
+    font-family: 'open-sans', sans-serif;
+    
+}
 
 .nav-wrapper {
         width: 100%;
@@ -109,6 +121,7 @@ body{
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
     margin-top: 60px;
+
 }
 .form-style-5 fieldset{
     border: none;
@@ -141,37 +154,90 @@ body{
 }
 
 form{
-    padding: 20px;
+    padding: 0px;
 }
 
 .personal_info{
-    padding: 10px;
     padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'open-sans', sans-serif;
 }
 
 .tell{
     display: inline-flex;
     padding-bottom: 25px;
+    padding-top: 20px;
 }
 
 .item{
-    padding: 20px;
+    margin-left: 60px;
 
+}
+.choice{
+    padding: 20px;
 }
 
 .choice img{
     height: 100px;
+    margin-bottom: 20px;
 }
 
 .category-box{
     display: inline-flex;
     padding-bottom: 25px;
+    margin-left:80px;
 }
 
 .category{
     padding: 20px;
     padding-right: 40px;
 }
+
+.category img{
+    height:150px;
+    width: 150px;
+}
+
+.send{
+    padding-top: 30px;
+}
+
+.send button{
+    border: 1px solid #2096ba;
+    color: #2096ba;
+    height: 50px;
+    width: 100px;
+}
+
+.send button:hover{
+    background: #2096ba;
+    color: white;
+}
+
+.icon{
+    margin-left: 35px;
+}
+
+.file_drag_area  
+           {  
+                width:600px;  
+                height:400px;  
+                border:2px dashed #ccc;  
+                line-height:400px;  
+                text-align:center;  
+                font-size:24px;  
+           }  
+           .file_drag_over{  
+                color:#000;  
+                border-color:#000;  
+           }  
+
+
+
 
 </style>
 </head>
@@ -194,25 +260,25 @@ form{
     <div class="form-style-5">
         <form>
             <fieldset>
-                <legend><span class="number">1</span> Tell us about you</legend>
+                <h2><span class="number">1</span>Tell us about you</h2>
                 <div class="personal_info">
                     <div class="inside">
-                        <span class="icon"><img src="https://sell.ebth.com/hubfs/Seller%20Site/icon-person.png?t=1532571194833" alt="Your location" title="Your location"></span>
-                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" type="text">
+                        <span class="icon"><i class="icon fa fa-user-alt"></i></span>
+                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
 
-                        <span class="icon"><img src="https://sell.ebth.com/hubfs/Seller%20Site/icon-location.png?t=1532571194833" alt="Your location" title="Your location"></span>
-                        <input name="locate" placeholder="Your zipcode" default="Your zipcode" aria-required="true" autoformat="#####" title="Tell us where you are" class="validate-custom /^([0-9]{5})([\-]{1}[0-9]{4})?$/ large required" type="text">
+                        <span class="icon"><i class="icon fa fa-map-marked-alt"></i> </span>
+                        <input name="name" value="" placeholder="Location" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
 
-                        <span class="icon"><img src="https://sell.ebth.com/hubfs/Seller%20Site/icon-location.png?t=1532571194833" alt="Your location" title="Your location"></span>
-                        <input name="contact" placeholder="Contact" aria-required="true" autoformat="#####" type="text">
+                        <span class="icon"><i class="icon fa fa-phone"></i></span>
+                        <input name="name" value="" placeholder="Contact" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
 
-                        <span class="icon"><img src="https://sell.ebth.com/hubfs/Seller%20Site/icon-location.png?t=1532571194833" alt="Your location" title="Your location"></span>
-                        <input name="Email" placeholder="Email" aria-required="true" autoformat="#####" type="text">
+                        <span class="icon"><i class="icon fa fa-envelope"></i></span>
+                        <input name="name" value="" placeholder="Email" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
                             
                     </div>
                 </div>
                 
-                <legend><span class="number">2</span> How many items you want to sell?</legend>
+                <h2><span class="number">2</span> How many items you want to sell?</h2>
                 
                 <div class="tell">
                     <div class="item">
@@ -251,94 +317,132 @@ form{
 
                 </div>
 
-                <legend><span class="number">3</span> What do you have?</legend>
+                <h2><span class="number">3</span> What do you have?</h2>
                     <div class="category-box">
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/bed.jpg" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>BED</span>
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/chair.jpg" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span> 
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>CHAIR</span> 
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/rack.jpg" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>RACK</span>
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/drawer.jpeg" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>DRAWER</span>
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/daraj.jpeg" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>CUPBOARD</span>
+                        </div>
+                        
+                    </div>
+                <div class="category-box">
+                        
+                        <div class="choice">
+                            <div class="category">
+                                <img src="assets/carpet.jpeg" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                            </div>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>CARPET</span>
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/round_table.jpeg" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>TABLE</span>
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/sofa.jpeg" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>SOFA</span>
                         </div>
 
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/other.jpeg" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>OTHERS</span>
                         </div>
-
                         <div class="choice">
                             <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
+                                <img src="assets/carpet.jpeg" title="Jewelry and Watches" border="0">
                             </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
-                        </div>
-
-                        <div class="choice">
-                            <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
-                            </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
-                        </div>
-
-                        <div class="choice">
-                            <div class="category">
-                                <img src="https://sell.ebth.com/hubfs/Seller%20Site/leadgen_jewelry-watches1.jpg?t=1532571194833" alt="Jewelry and Watches" title="Jewelry and Watches" border="0">
-                            </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>Jewelry and Watches</span>
+                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>CUPBOARD</span>
                         </div>
                               
                     </div>
-                    <legend><span class="number">4</span> Send us your item photo</legend>
-                    <div class="addphoto">
+                    <h2><span class="number">4</span> Send us your item photo</h2>
+                    <div class="container" style="width:700px;" align="center">  
+                <h3 class="text-center">Drag and drop file upload using JQuery Ajax and PHP</h3><br />  
+                <div class="file_drag_area">  
+                     Drop Files Here  
+                </div>  
+                <div id="uploaded_file"></div>  
+                <div class="send">
+                    <button> SEND </button>
+                </div>
+           </div>  
 
-                    </div>
             </Fieldset>
+        </form>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery1.12.4/jquery.min,\.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script>  
+ $(document).ready(function(){  
+      $('.file_drag_area').on('dragover', function(){  
+           $(this).addClass('file_drag_over');  
+           return false;  
+      });  
+      $('.file_drag_area').on('dragleave', function(){  
+           $(this).removeClass('file_drag_over');  
+           return false;  
+      });  
+      $('.file_drag_area').on('drop', function(e){  
+           e.preventDefault();  
+           $(this).removeClass('file_drag_over');  
+           var formData = new FormData();  
+           var files_list = e.originalEvent.dataTransfer.files;  
+           //console.log(files_list);  
+           for(var i=0; i<files_list.length; i++)  
+           {  
+                formData.append('file[]', files_list[i]);  
+           }  
+           //console.log(formData);  
+           $.ajax({  
+                url:"upload.php",  
+                method:"POST",  
+                data:formData,  
+                contentType:false,  
+                cache: false,  
+                processData: false,  
+                success:function(data){  
+                     $('#uploaded_file').html(data);  
+                }  
+           })  
+      });  
+ });  
+ </script>  
+
 </body>
 
 </html>
