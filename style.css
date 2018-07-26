@@ -33,7 +33,7 @@ button {
   background-color: #26532b; /* Green */
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 8px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -734,11 +734,11 @@ img{
    height: 0;
    clear: both;
 }
-
+/*actual btn*/
 .btn {
     background-color: white;
-    border: 1px solid #df6e21;
-    color: #df6e21;
+    border: 1px solid #2096ba;
+    color: #2096ba;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
@@ -746,7 +746,7 @@ img{
 
 /* Darker background on mouse-over */
 .btn:hover {
-    background-color: #df6e21;
+    background-color: #2096ba;
     color: white;
 }
 /*search*/

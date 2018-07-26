@@ -22,6 +22,10 @@ html *{
     font-family: 'open-sans', sans-serif;
     
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 
 .nav-wrapper {
         width: 100%;
@@ -109,19 +113,28 @@ html *{
 }
 
 /*****************globals*************/
-body{
+/*body{
     position: absolute;
+}*/
+
+body{
+    margin: 0;
 }
 
 
 
 /* form */
 .form-style-5{
-    padding: 10px;
+    padding: 100px;
+    overflow-x: hidden;
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
-    margin-top: 60px;
+    padding-top: 60px;
 
+}
+.inside{
+    width: 100%;
+    text-align: center;
 }
 .form-style-5 fieldset{
     border: none;
@@ -156,6 +169,14 @@ body{
 form{
     padding: 0px;
 }
+.inside input{
+    height: 40px;
+    /*width: 220px;*/
+    width: 20%;
+}
+.icon{
+    padding-left: 10px;
+}
 
 .personal_info{
     padding-bottom: 40px;
@@ -171,6 +192,7 @@ h2{
     display: inline-flex;
     padding-bottom: 25px;
     padding-top: 20px;
+    text-align: center;
 }
 
 .item{
@@ -218,9 +240,7 @@ h2{
     color: white;
 }
 
-.icon{
-    margin-left: 35px;
-}
+
 
 .file_drag_area  
            {  
@@ -263,17 +283,17 @@ h2{
                 <h2><span class="number">1</span>Tell us about you</h2>
                 <div class="personal_info">
                     <div class="inside">
-                        <span class="icon"><i class="icon fa fa-user-alt"></i></span>
-                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
+                        <span class="icon fa fa-user-alt"></span>
+                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" type="text">
 
                         <span class="icon"><i class="icon fa fa-map-marked-alt"></i> </span>
-                        <input name="name" value="" placeholder="Location" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
+                        <input name="name" value="" placeholder="Location" aria-required="true" title="Name" class="large half margin required" type="text">
 
                         <span class="icon"><i class="icon fa fa-phone"></i></span>
-                        <input name="name" value="" placeholder="Contact" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
+                        <input name="name" value="" placeholder="Contact" aria-required="true" title="Name" class="large half margin required" type="text">
 
                         <span class="icon"><i class="icon fa fa-envelope"></i></span>
-                        <input name="name" value="" placeholder="Email" aria-required="true" title="Name" class="large half margin required" style="height: 40px;width: 220px;" type="text">
+                        <input name="name" value="" placeholder="Email" aria-required="true" title="Name" class="large half margin required" type="text">
                             
                     </div>
                 </div>
@@ -347,12 +367,6 @@ h2{
                                 <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>DRAWER</span>
                         </div>
 
-                        <div class="choice">
-                            <div class="category">
-                                <img src="assets/daraj.jpeg" title="Jewelry and Watches" border="0">
-                            </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>CUPBOARD</span>
-                        </div>
                         
                     </div>
                 <div class="category-box">
@@ -384,13 +398,7 @@ h2{
                             </div>
                                 <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>OTHERS</span>
                         </div>
-                        <div class="choice">
-                            <div class="category">
-                                <img src="assets/carpet.jpeg" title="Jewelry and Watches" border="0">
-                            </div>
-                                <span style="display: flex;"><div class="category-checkbox"><input name="tfa_2126" id="tfa_2126" value="tfa_2126" type="checkbox">&nbsp;</div>CUPBOARD</span>
-                        </div>
-                              
+                        
                     </div>
                     <h2><span class="number">4</span> Send us your item photo</h2>
                     <div class="container" style="width:700px;" align="center">  
