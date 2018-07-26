@@ -35,27 +35,39 @@
   <div class='vertical-menu'>
 
     <div class="form-style-5">
+      <div class="bar_title">
+            <div class="small_bar">
+                <h1> SELL US YOUR PROPERTY </h1>
+            </div>
+        </div>
 <form>
-<fieldset>
-<legend><span class="number">1</span> Personal Info</legend>
+<h2><span class="number">1</span> Personal Information</h2>
 
 <ul class="form-style-1">
-    <li><label>Name </label><input type="text" name="field1" class="field-divided" placeholder="Name" style="margin-bottom:25px;"/></li>
-    <li><label>Contact Number <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Contact" style="margin-bottom:25px;"/>&nbsp;</li>
-    <li>
-        <label>Email </label>
-        <input type="email" name="field3" class="field-divided" placeholder="Email" style="margin-bottom:25px;"/>
-    </li>
-  
-</fieldset>
+    <div class="personal_info">
+                    <div class="inside">
+                        <span class="icon fa fa-user-alt" style="padding-left:20px;"></span>
+                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" type="text">
 
-<fieldset>
-<legend><span class="number">2</span> Property Info</legend>
+                        <span class="icon" style="padding-left:20px;"><i class="icon fa fa-map-marked-alt"></i> </span>
+                        <input name="name" value="" placeholder="Location" aria-required="true" title="Name" class="large half margin required" type="text">
+
+                        <span class="icon" style="padding-left:20px;"><i class="icon fa fa-phone"></i></span>
+                        <input name="name" value="" placeholder="Contact" aria-required="true" title="Name" class="large half margin required" type="text">
+
+                        <span class="icon" style="padding-left:20px;"><i class="icon fa fa-envelope"></i></span>
+                        <input name="name" value="" placeholder="Email" aria-required="true" title="Name" class="large half margin required" type="text">
+                            
+                    </div>
+                </div>
+
+<h2><span class="number">2</span> Property Information</h2>
 
   <ul class="form-style-1">
+    <div class="one">
     <li>
         <label>Choose your Property Type</label>
-        <select name="field4" class="field-divided">
+        <select name="field4" class="field-divided" style="margin-right:80px;">
         <option value="Advertise">Room</option>
         <option value="Partnership">Apartment</option>
         <option value="General Question">House</option>
@@ -64,6 +76,8 @@
     <li>
       <label>Location <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Location" style="margin-bottom:25px;"/>
     </li>
+  </div>
+  <div class="two">
     <li style="margin-bottom:30px;">
       <label>No of:</label>
       <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:100px;"/>
@@ -87,15 +101,18 @@
         <label style="margin-top:25px;">Photos <span class="required">*</span></label>
         <button style="height: 200px;border: 1px solid blue;">Drag your images here</button>
     </li>
-    
+    </div>
 </ul>
+
+
+
+
+
     
-</fieldset>
+<h2><span class="number">3</span> Your Preference</h2>
 
-<fieldset>
-<legend style="margin-top:20px"><span class="number">3</span> Your Preference</legend>
-
-  <ul class="form-style-1">
+  <ul class="form-style-1" style="padding-top:30px;">
+    <div class="three">
     <li>
         <label>Preferences <span class="required">*</span></label>
         <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
@@ -103,24 +120,15 @@
     <li style="margin-top:25px; float: right">
         <input type="submit" value="Submit" />
   </li>
+</div>
   </ul>
 
   
     
-</fieldset>  
+  
 </form> 
 </div>
   </div>
-  
-
-    <div class="map-wrapper">
-      <legend> Locate your property in the map (Optional)</legend>
-    <div id="map">
-
-    </div>
-     
-    </div>
-    
 
 
   </div>

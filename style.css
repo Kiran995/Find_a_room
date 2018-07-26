@@ -1033,3 +1033,15 @@ label:hover:before {
     filter: sepia(50%);
 }
 
+
+
+.nav-menu .btn {
+  border: 1px solid orange;
+  color: orange;
+
+}
+
+.nav-menu .btn:hover{
+  background: orange;
+  color: white;
+}

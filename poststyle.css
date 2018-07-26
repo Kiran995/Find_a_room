@@ -1,3 +1,16 @@
+html *{
+    font-family: 'open-sans', sans-serif;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+  text-align: center;
+}
+
 body{
   width: 100%;
   margin: 0px;
@@ -166,7 +179,7 @@ body {
 
   padding: 10px;
   margin-top: 60px;
-  width: 60%;
+  width: 100%;
   float: left;
   height: 100vh;
   
@@ -198,27 +211,7 @@ body {
 
 
 
-/* Set the size of the div element that contains the map */
-#map {
-  position: fixed;
-  margin:10px;
- 
-  margin-left: 10px;
-  border: 5px;
-  height: 580px;  /* The height is 400 pixels */
- }
 
- .map-wrapper{
-  float:left;
-   margin-top: 80px;
-  width: 40%;
-  position: fixed;
-  margin-left: 60%;
-  height: 100vh;
-  overflow-y: hidden;
-  box-sizing: border-box; 
-
-}
 
 /* form */
 .form-style-5{
@@ -254,11 +247,9 @@ body {
 
 .form-style-1 {
 
-    padding: 0;
+    padding: 50px;
     display: block;
     list-style: none;
-    margin: 10px 0 0 0;
-    margin-left: 120px;
 }
 .form-style-1 label{
     margin:0 0 3px 0;
@@ -304,12 +295,13 @@ select{
     border: 1px solid #88D5E9;
 }
 .form-style-1 .field-divided{
-    width: 49%;
+    width: 350px;
     margin-bottom: 30px;
 }
 
 .form-style-1 .field-long{
     width: 100%;
+
 }
 .form-style-1 .field-select{
     width: 100%;
@@ -333,6 +325,48 @@ select{
     -webkit-box-shadow:none;
 }
 .form-style-1 .required{
-    color:red;
+    color:none;
 }
 
+/*new css*/
+.inside{
+    width: 100%;
+    text-align: center;
+}
+
+.bar_title{
+    padding: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-image: url("assets/land2.jpg");
+    height: 200px;
+}
+.small_bar{
+    background-color: #ffb74d;
+}
+
+form{
+  padding-top: 40px;
+}
+
+.personal_info{
+  padding-bottom: 20px;
+}
+
+.one{
+  display: inline-flex;
+  padding-left: 80px;
+}
+
+.two{
+  padding-left: 80px;
+}
+
+.three{
+  padding-left: 80px;
+}
+
+.inside input{
+  height: 40px;
+  
+}
