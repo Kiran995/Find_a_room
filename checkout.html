@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<style type="text/css">
+*{
+  font-family: 'open-sans', sans-serif
+}
+
+    .nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
+
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 8px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        color: black;
+        }
+        .wish-list:hover{
+            background: orange;
+            color: white;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+/**********************************************/
+
+.container{
+  padding-top: 50px;
+}
+
+.wizard {
+    margin: 20px auto;
+    background: #fff;
+}
+
+    .wizard .nav-tabs {
+        position: relative;
+        margin: 40px auto;
+        margin-bottom: 0;
+        border-bottom-color: #e0e0e0;
+    }
+
+    .wizard > div.wizard-inner {
+        position: relative;
+    }
+
+.connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+span.round-tab i{
+    color:#555555;
+}
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #5bc0de;
+    
+}
+.wizard li.active span.round-tab i{
+    color: #5bc0de;
+}
+
+span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+}
+
+.wizard .nav-tabs > li {
+    width: 25%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #5bc0de;
+}
+
+.wizard .nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+    .wizard .nav-tabs > li a:hover {
+        background: transparent;
+    }
+
+
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+}
+
+@media( max-width : 585px ) {
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+}
+
+.footer-wrapper li{
+
+    text-decoration: none;
+    display: inline;
+    padding: 0px 80px;
+}
+.clearfix:after {
+       content: " "; /* Older browser do not support empty content */
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+}
+
+
+
+
+
+.terms-cond{
+  box-shadow: 0px 0px 10px 0px #c2c2c2;
+  padding: 20px;
+  float: right;
+  padding-left: 50px;
+}
+
+.pay-rent{
+
+  border-bottom: 1px solid #c2c2c2;
+  border-top: 1px solid #c2c2c2;
+  padding: 15px;
+
+}
+.comm-cond{
+  float: left;
+  box-shadow: 0px 0px 10px 0px #c2c2c2;
+  padding: 20px;
+  margin-left: 100px;
+
+}
+
+.rent-agg{
+  padding: 4px;
+  line-height: 1.5;
+}
+.faq{
+  padding-top: 330px;
+
+}
+input{
+ 
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #d3d3d3;
+  
+}
+input[type=text]:focus {
+    border: 2px solid silver;
+}
+select{
+    
+    padding: 7px;
+    border: 2px solid #d3d3d3;
+    border-radius: 3px;
+    width: 200px;
+    
+}
+.span3{
+  width: 100%;
+
+}
+.first-form{
+  float: left;
+  width: 400px;
+}
+.second-form{
+  float: right;
+  
+  width: 600px;
+}
+.btn-primary{
+  background: orange;
+  color: white
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid orange;
+  
+ 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  letter-spacing: 1px
+}
+
+
+
+.btn-primary:hover {
+    background-color: orange;
+    color: white;
+    border: none;
+    border: 1px solid orange;
+   
+  
+}
+a {
+    color: black;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+
+}
+
+
+
+</style>
+
+    
+  </head>
+  <body>
+
+  <div class="main">
+  <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fas fa-shopping-cart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+      
+      
+<div class="container">
+  <div class="row">
+    <section>
+        <div class="wizard">
+            <div class="wizard-inner">
+                <div class="connecting-line"></div>
+                <ul class="nav nav-tabs" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-list-alt"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                            <span class="round-tab">
+                                <i class="fas fa-users"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="disabled">
+                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                            <span class="round-tab">
+                                <i class="fas fa-credit-card"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-ok"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <form role="form">
+                <div class="tab-content" >
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <h3 style="text-align: center;padding-bottom: 20px">Accept Our Terms and Conditions</h3>
+                        <div class="comm-cond">
+                        
+                          <h4>Commercial Terms</h4>
+                          <div class="pay-rent">
+                          <span style="font-size: 16px">Total Rent: <span style="
+                          color: orange">Rs. 30,000</span></span> <span style="font-size: 12px; padding-left: 10px">per month</span><br/>
+                          <span style="font-size: 12px; padding-left: 172px">Includes maintenance</span>
+                          <br/>
+                          <span class="">Payable to us</span>
+                          
+                        </div>
+                        <div class="pay-rent">
+                          
+                          <span style="font-size: 16px">Security Deposit: <span style="
+                          color: orange">Rs. 50,000</span></span> <br/><span style="font-size: 12px;">to be paid in single installment.</span><br/>
+                          <span style="font-size: 12px">You can also request it to be paid in two installments<br/> after booking (with 5% interest levied on <br/>second installment)</span>
+                          <br/>
+                          
+                          
+                        </div>
+                        </div>
+
+
+
+
+                        <div class="terms-cond" style="width: 50%">
+
+                        <h4>Rental Agreement</h4>
+                        <ul class="rent-agg">
+                        
+
+                          <li>The rental agreement is for 11 months duration, past which it can be renewed on mutual   consent.</li>
+
+                          <li>We reserve the right to terminate the booking based on tenant screening, in which case you will get full refund of token amount.</li>
+
+                          <li>Payments for move-in charges and utilities such as electricity, cable, etc will be payable by the tenant.</li>
+
+                          <li>The tenant is not permitted to let out the property to any other person in part or full.</li>
+
+                          <li>Your cooperation is sought for signing the rental agreement within 7 working days of booking, or before the move-in date, whichever is earlier.</li>
+                          </ul></div>
+
+                          <div class="faq"><br/><br/>
+
+
+                            <h4><ins>Frequently Asked Questions</ins></h4><br/>
+                            <strong>Q: When can I see the property?<br/></strong>
+
+                            <strong>A: </strong>We will get in touch with you within 24 hours of booking completion and schedule a site visit at your preferable time.<br/><br/>
+
+                            <strong>Q: Can we negotiate the terms?<br/></strong>
+
+                            <strong>A: </strong>The terms are not negotiable. However, we can consider some arrangements for both of our conveniences.
+                          </div><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-primary next-step">Accept and Continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                        <h3 style="text-align: center;">Provide your Details</h3><br/>
+
+
+                        <div class="span3 clearfix" >
+                          
+                          <form>
+                          <div class="first-form" >
+                          <label>First Name</label><br/>
+                          <input type="text" placeholder="firstname" class="span3"><br/><br/>
+                          <label>Last Name</label><br/>
+                          
+                          <input type="text" placeholder="lastname" class="span3"><br/><br/>
+                          <label>Email Address</label><br/>
+                          <input type="email" name="email" class="span3"><br/><br/>
+                          <label>Contact Info:</label><br/>
+                          <input type="text" class="span3"><br/><br/>
+                          <label>Address</label><br/>
+                          <input type="text" name="text" class="span3"><br/><br/>
+                          </div>
+
+                          <div class="second-form" >
+
+                          <label>No.of Tenants (max 3)</label><br/>
+                          <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select><br/><br/>
+
+                          <label>Tenant Type</label><br/>
+
+                        <label class="radio-inline"><input type="radio" name="optradio" checked>Family/Friends</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">Bachelor</label><br/><br/>
+
+                        <label>Message:</label><br/>
+                        (Any confusions or comments that you would like to provide us with. We shall contact you regarding this as soon as posible)<br/><br/>
+                        <textarea class="form-control" rows="9" id="comment"></textarea><br/><br/><br/>
+
+
+
+                            
+                          </div>
+
+                          <div>                          
+                          <label><input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</label></div>
+                          
+                          <div class="clearfix"></div>
+                          </form>
+                      </div>
+                        
+
+
+
+
+
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                            <li><button type="button" class="btn btn-primary next-step">Save and Continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+                        <h3 style="text-align: center;">Pay Token in Advance</h3>
+                        <div class="token" style="text-align: center; line-height: 2; box-shadow: 0px 0px 10px 0px #c2c2c2; margin: 30px 200px; padding-top: 10px; padding-bottom:20px ">
+
+                        <h4>Token Amount</h4>
+
+                        <span style="color: orange; font-size: 20px">Rs. 10,000</span>
+                        <span style="font-size: 12px">
+                        Fully refundable for cancellation.
+                          <br/>
+                        </span>
+                        This amount will be adjusted in your rent amount or security deposit. <br/>
+                        You can also get the money back if you like. This token is so that you can book your space. <br/>
+                        However, we are in full rights to terminate the booking after tenant screening process.
+
+
+                        </div>
+                        
+
+                        <div style="padding-top: 10px">
+
+
+                            <h4><ins>Frequently Asked Questions</ins></h4><br/>
+                            <strong>Q: Why do I have to pay the token advance?
+                            <br/></strong>
+
+                            <strong>A: </strong>As all the property is available online, lots of people are seeing the same property. By payment of token advance, we reserve it for you so that we can assure you of its availability when you visit it.<br/>
+                            You can also pay for advance by visiting or contacting us.<br/><br/>
+
+                            <strong>Q: How can I cancel the booking?
+                            <br/></strong>
+
+                            <strong>A: </strong>Once the booking is complete, you will get access to your booking dashboard. From there you will be able to cancel the booking online.<br/><br/>
+
+                            <strong>Q: When will I get my refund?
+                            <br/></strong>
+
+                            <strong>A: </strong>                            
+                            The money will be refunded within 24 hours of booking cancellation. However, it may take 5-7 days for the banks to process it.<br/><br/>
+
+                            <strong>Q: What if I like multiple properties?
+
+                            <br/></strong>
+
+                            <strong>A: </strong>You can book multiple properties simultaneously, in which case you'll have to pay token multiple times.<br/>
+
+                            Alternatively, you can cancel the present booking and use its token amount to book another property.<br/><br/>
+
+
+                          </div>
+
+
+
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                            <li><button type="button" class="btn btn-default next-step">Pay Later</button></li>
+                            <li><button type="button" class="btn btn-primary btn-info-full next-step"> Continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="complete" style="text-align: center; height: 200px">
+                        <h3 style="text-align: center; padding-bottom: 30px">Thank You for Choosing Us</h3>
+                        <p>You have successfully booked your new space.</p>
+                        <p>Our representative will be contacting you to take it further.</p>
+
+                        <ul class="list-inline pull-right" style="padding-top: 150px">
+                            <li>
+                            <button class="btn btn-primary"><a href="mainPage.html">Back to main page</a></button></li></ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+   </div>
+</div>
+
+
+
+
+    
+
+
+    <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px">
+    The Hipsters Ⓒ 2018<br/><br/>
+    <li>
+
+    About Us </li>
+
+<li>Terms Of Use</li>
+
+
+<li>Privacy Policies</li>
+        
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+
+
+  $(document).ready(function () {
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
+    
+    //Wizard
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+        var $target = $(e.target);
+    
+        if ($target.parent().hasClass('disabled')) {
+            return false;
+        }
+    });
+
+    $(".next-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        $active.next().removeClass('disabled');
+        nextTab($active);
+
+    });
+    $(".prev-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        prevTab($active);
+
+    });
+});
+
+function nextTab(elem) {
+    $(elem).next().find('a[data-toggle="tab"]').click();
+}
+function prevTab(elem) {
+    $(elem).prev().find('a[data-toggle="tab"]').click();
+}
+</script>
+
+
+
+  </body>
+
+</html>
+
+
+
