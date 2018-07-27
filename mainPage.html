@@ -6,13 +6,18 @@ terracotta df6e21 -->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>kjshfk</title>
+	<title>index</title>
 	<style type="text/css">
 	*{
 		margin: 0;
 		font-family: 'Open Sans', sans-serif;
 
 	}
+
+  body{
+    overflow-x: hidden;
+  }
+
 	.header-wrapper{
 		/*http://nepalhomesearch.com/images/listing_photos/6382_sunrise4.jpg*/
 		background: url("http://www.viendoraglass.com/server10-cdn/2016/08/06/modern-bedroom-design-color-interior-and-red-accents-on-recommended-colors-for-bedroom-dcc371957f350054.jpg");
@@ -135,7 +140,7 @@ terracotta df6e21 -->
 	background-color: orange;
     color: white;
     font-size: 16px;
-    padding: 12px 20px;
+    padding: 12px 42px;
     border: none;
 
 }
@@ -207,7 +212,9 @@ hr{
 
 .first-section .first-block .block-info{
     float: right;
-    margin-right: 200px;
+    width: 320px;
+   
+    
 }
 .first-section .first-block .block-title{
     width: 65px;
@@ -309,14 +316,14 @@ hr{
     letter-spacing: 1px;
     color: #908e8e;
 }
-.fifth-section .product-shop button{
+.carousel-button{
     padding: 0px 0px;
     border-style: none;
     height: 40px;
     width: 75%;
     margin-left: 12.5%;
 }
-.fifth-section .product-shop .carousel-button{
+.carousel-button{
     background-color: #2096ba;
     padding: 0px 0px;
     color: #fff;
@@ -326,13 +333,11 @@ hr{
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     z-index: 2;
     text-align: center;
+    cursor: pointer;
+
 }
-.fifth-section .product-shop .carousel-button a{
-    text-decoration: none;
-    color: white;
-    height: 30px;
-}
-.fifth-section .product-shop .carousel-button::before{
+
+.carousel-button::before{
     content: '';
     position: absolute;
     border: #2096ba solid 4px;
@@ -343,7 +348,13 @@ hr{
     transition: 0.2s ease-out;
     transition-property: top, right, bottom, left;
 }
-.fifth-section .product-shop .carousel-button:hover::before{
+
+.carousel-button a{
+    text-decoration: none;
+    color: white;
+    height: 30px;
+}
+ .carousel-button:hover::before{
     top: -8px;
     bottom: -8px;
     left: -8px;
@@ -395,6 +406,13 @@ hr{
 	display: inline;
 	padding: 0px 80px;
 }
+.first-block a{
+  color: black
+
+}
+a{
+  text-decoration: none
+}
 
 
 	.clearfix:after {
@@ -419,7 +437,6 @@ hr{
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
 
-<link rel="stylesheet" type="text/css" href="./style-product.css">
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
@@ -432,9 +449,9 @@ hr{
 		<nav class="nav-wrapper clearfix">
 			<div class="logo">LOGO</div>
 			<div class="nav-menu">
-				<button class = "btn nav-button"> List your Property</button>	
+				<button class = "btn nav-button" onclick="location.href='post.html'"> List your Property</button>	
 				<ul class = "register" >
-				<li><a><span class="wish-list fa fa-heart" ></span></a></li>
+				<li><span class="wish-list fas fa-shopping-cart" onclick="location.href='cart.html'"></span></a></li>
 					<li><button>Register</button></li>
 					<li><button>Login</button></li>
 				</ul>	
@@ -445,28 +462,27 @@ hr{
 
 		<div class="banner-text">
 			
-			Your Complete <span style="color: orange">Rental Solution</span>
+			Your Complete <span style="color: orange;">Rental Solution</span>
 			</div>
 			<div class="category-btn">
 
-				<button class = "list-btn rent-room"> Rental Listings</button>
-				<span style="display:inline-block; width: 20px;"></span>
+				<button class = "list-btn rent-room" onclick="location.href='searchRoom.html'">Rental Spaces</button>
+				<span style="display:inline-block; width: 30px;"></span>
 
-				<button class="list-btn roommate-share">Co-sharing Spaces</button>
-								<span style="display:inline-block; width: 20px;"></span>
+				
 
-				<button class="list-btn furnish-room">Furnishing Services</button>
+				<button class="list-btn furnish-room" onclick="location.href='searchRoom.html'">Furnishing Services</button>
 			</div>
 	</div>
 	 
 	<div class="body-wrapper">
 		
  <div class="icon-bar">
-            <div class="each-icon"><img src="time.png" style="border-radius: 50%; height: 120px; width: 120px; padding: 15px 0px"><br/>
+            <div class="each-icon"><img src="./assets/time.png" style="border-radius: 50%; height: 120px; width: 120px; padding: 15px 0px"><br/>
             <strong>Timely Rent Payment</strong></div>
-             <div class="each-icon"><img src="homi.png" style="border-radius: 50%; height: 150px; width: 150px"><br/>
+             <div class="each-icon"><img src="./assets/homi.png" style="border-radius: 50%; height: 150px; width: 150px"><br/>
              <strong>Your Perfect Space</strong></div>
-             <div class="each-icon"><img src="care.png" style="border-radius: 50%; height: 150px; width: 150px"><br/>
+             <div class="each-icon"><img src="./assets/care.png" style="border-radius: 50%; height: 150px; width: 150px"><br/>
              <strong>The Right Care</strong></div>
 
             <!-- <p>TIMELY RENT PAYMENT 
@@ -486,6 +502,7 @@ hr{
 <div class="first-section">
 
            <div class="first-block clearfix">
+           <a href="product.html">
                <div class="content">
                    <div class="block-title">
                        <div class="F">F</div>eaured
@@ -499,18 +516,27 @@ hr{
                 </div>
                                 <img src="http://www.aprar.net/7/2015/10/elegant-wooden-kitchen-cabinet-modern-company-building-design-that-has-cream-modern-ceramics-floor-can-add-the-beauty-inside-modern-house-design-ideas.jpg" alt="">
                                 <div class="block-info">
-                               <p>lekhna baki<br/>xa
-                                </p>
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
+                                <div style="padding-left: 15px; padding-top: 10px">
+                                
+                                <h4><strong>Building BS212</strong></h4><br/>
+                                <p>
+                                  <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Hattiban, Kathmandu<br/><br/>
+                                  <strong> Total Price: </strong> Rs. 30,000 /month <br/><br/>
+                                  A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                                </p><br/>
                                 </div>
                                 
+                                <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                                    
+                                </div>
+                       </a>       
 
                 
            </div>
 
 
            <div class="first-block">
+           <a href="product.html">
                <div class="content">
                    <div class="block-title">
                        <div class="F">F</div>eaured
@@ -524,12 +550,22 @@ hr{
                 </div>
                                 <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/113/113244581.jpg" alt="">
  <div class="block-info">
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
+ <div style="padding-left: 15px; padding-top: 10px">
+                                
+                                <h4><strong>Building BS212</strong></h4><br/>
+                                <p>
+                                  <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Lagankhel, Kathmandu<br/><br/>
+                                  <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
+                                  A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                                </p><br/>
                                 </div>
+                                <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                                    
+                                </div></a>
                 
            </div>
            <div class="first-block">
+           <a href="product.html">
                <div class="content">
                    <div class="block-title">
                        <div class="F">F</div>eaured
@@ -543,12 +579,22 @@ hr{
                 </div>
                                 <img src="http://nepal.rentline.co/wp-content/uploads/awpcp/2-Bedroom-Apartment-For-Rent-in-Sunrise-Tower-Dhobighat-Lalitpur-2-large.jpg" alt="">
  <div class="block-info">
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
+ <div style="padding-left: 15px; padding-top: 10px">
+                                
+                                <h4><strong>Building BS202</strong></h4><br/>
+                                <p>
+                                  <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Kupondole, Kathmandu<br/><br/>
+                                  <strong> Total Price: </strong> Rs. 40,000 /month <br/><br/>
+                                  A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                                </p><br/>
                                 </div>
+                                <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                                    
+                                </div></a>
                 
            </div>
            <div class="first-block">
+           <a href="product.html">
                <div class="content">
                    <div class="block-title">
                        <div class="F">F</div>eaured
@@ -562,9 +608,18 @@ hr{
                 </div>
                                 <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/102/102347634.jpg" alt="">
  <div class="block-info">
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
+ <div style="padding-left: 15px; padding-top: 10px">
+                                
+                                <h4><strong>Building BS322</strong></h4><br/>
+                                <p>
+                                  <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Kalanki, Kathmandu<br/><br/>
+                                  <strong> Total Price: </strong> Rs. 45,000 /month <br/><br/>
+                                  A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                                </p><br/>
                                 </div>
+                                <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                                    
+                                </div></a>
 
                 
            </div>
@@ -591,7 +646,7 @@ hr{
                     <div class="products row ">
                        <div class="product-image">
                        
-                        <button><a href="#">VIEW MORE</a></button>
+                        <button><a href="product.html">VIEW MORE</a></button>
                           
                         
                        <img src="http://nepal.rentline.co/wp-content/uploads/awpcp/3-Bedroom-Flat-for-rent-in-Prestige-Apartments-Chandol-Kathmandu-1-large.jpg" alt="">
@@ -601,7 +656,7 @@ hr{
                         <div class="product-shop ">
                            <h1>Building ABC</h1>
                                <h2>$25.4<del>$ 29.1</del></h2>
-                            <button class="carousel-button"><a href="#">BOOK NOW</a></button>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BOOK NOW</a></button>
                          </div>
                     </div>
                     </div>
@@ -610,13 +665,13 @@ hr{
                     <div class="tab-pane">
                     <div class="products row ">
                        <div class="product-image">
-                       <button><a href="#">VIEW MORE</a></button>
+                       <button><a href="product.html">VIEW MORE</a></button>
                        <img src="http://nepalhomesearch.com/images/listing_photos/6378_DSC07048.jpg" alt="">
                         </div>
                         <div class="product-shop ">
                            <h1>Building DEF </h1>
                                <h2>$25.4<del>$ 29.1</del></h2>
-                            <button class="carousel-button"><a href="#">BOOK NOW</a></button>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BOOK NOW</a></button>
                          </div>
                     </div>
                     </div>
@@ -624,13 +679,13 @@ hr{
                     <div class="tab-pane">
                     <div class="products row ">
                        <div class="product-image">
-                       <button><a href="#">VIEW MORE</a></button>
+                       <button><a href="product.html">VIEW MORE</a></button>
                        <img src="http://afnobazaar.com/uploads/product/51/3-bedroom-house-in-chundevi-for-rent-for-1000-usd-1.jpg" alt="">
                         </div>
                         <div class="product-shop ">
                            <h1>Building XYZ </h1>
                                <h2>$25.4<del>$ 29.1</del></h2>
-                            <button class="carousel-button"><a href="#">BOOK NOW</a></button>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BOOK NOW</a></button>
                          </div>
                     </div>
                     </div>
@@ -638,13 +693,13 @@ hr{
                     <div class="tab-pane">
                     <div class="products row ">
                        <div class="product-image">
-                       <button><a href="#">VIEW MORE</a></button>
+                       <button><a href="product.html">VIEW MORE</a></button>
                        <img src="https://i.pinimg.com/736x/fd/24/7d/fd247df3c56fad766e50f948f07703b2--rental-listings-apartments-for-rent-in.jpg" alt="">
                         </div>
                         <div class="product-shop ">
                            <h1>Building MNO </h1>
                                <h2>$25.4<del>$ 29.1</del></h2>
-                            <button class="carousel-button"><a href="#">BOOK NOW</a></button>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';">BOOK NOW</a></button>
                          </div>
                     </div>
                     </div>
