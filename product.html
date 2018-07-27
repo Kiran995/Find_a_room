@@ -15,7 +15,6 @@
 
 <style type="text/css">
 
-
     .nav-wrapper {
         width: 100%;
         background-color:#fff;
@@ -71,9 +70,11 @@
         border: 2px solid orange;
         padding: 4px;
         cursor: pointer;
+        color: black;
         }
         .wish-list:hover{
             background: orange;
+            color: white;
         }
 
 
@@ -126,7 +127,49 @@ body {
     width: 100px;
 }
 
+.carousel-button{
+    padding: 0px 0px;
+    border-style: none;
+    height: 40px;
+    width: 75%;
+}
+.carousel-button{
+    background-color: #2096ba;
+    padding: 0px 0px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 0.8em;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    z-index: 2;
+    text-align: center;
+    cursor: pointer;
 
+}
+
+.carousel-button::before{
+    content: '';
+    position: absolute;
+    border: #2096ba solid 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s ease-out;
+    transition-property: top, right, bottom, left;
+}
+
+.carousel-button a{
+    text-decoration: none;
+    color: white;
+    height: 30px;
+}
+ .carousel-button:hover::before{
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;    
+}
 
 .preview-thumbnail.nav-tabs {
   border: none;
@@ -184,20 +227,33 @@ body {
 .room{
 border: 1px solid orange;
 border-radius: 5%; 
-color: white; 
-background: orange; 
+color: orange; 
+background: transparent; 
 padding: 10px;
 
+}
+.room span{
+	color: black;
+	font-size: 12px;
 }
 .room-info{
     font-family: 'open sans', sans-serif;
 
 }
+.amenity-info{
+    font-family: 'open sans', sans-serif;
+    color: black;
+
+}
 .amenities{
-    padding: 20px;
-    color: white;
-    background: orange;
+    padding: 15px;
+    color: black;
+    background: transparent;
+    border: 1px solid orange;
     border-radius: 7%;
+}
+.amenities {
+	color: orange;
 }
 
 .color {
@@ -260,7 +316,8 @@ padding: 10px;
 
 .carousel {
     margin-bottom: 0;
-    padding: 0 40px 30px 40px;
+        padding: 0 40px 30px 40px;
+
 }
 .item .row img{
     height: 200px;
@@ -304,7 +361,7 @@ background: #428bca;
     top: 30%;
     left: 20%;
     position: absolute;
-    background: orange;
+    background: #2096ba;
     text-decoration: none;
 }
 .item .row .col-md-3:hover a{
@@ -413,14 +470,14 @@ background: #428bca;
                             <i class="room fa fa-bath" data-toggle="tooltip" title="large"><span class="room-info"> 1 Bathroom </span></i>
                             
                         
-                        <h4 class="colors" style="padding-top: 8px; padding-bottom: 8px">Amenities:<br/><br/>
+                        <h4 class="colors" style="padding-top: 8px; padding-bottom: 8px">includes:<br/><br/>
                            
-                            <span class="amenities fa fa-wifi"></span>
-                            <span class="amenities fa fa-tint"></span>
-                            <span class="amenities fa fa-car"></span>
-                            <span class="amenities fa fa-tty"></span>
-                            <span class="amenities fa fa-bolt"></span>
-                            <span class="amenities fa fa-paw"></span>
+                            <span class="amenities fa fa-wifi"><span class="amenity-info" style ="font-size: 10px" > Wifi</span></span>
+                            <span class="amenities fa fa-tint"><span class="amenity-info" style ="font-size: 10px" > Water</span></span>
+                            <span class="amenities fa fa-car"><span class="amenity-info" style ="font-size: 10px" > Parking</span></span>
+                           
+                            <span class="amenities fa fa-bolt"><span class="amenity-info" style ="font-size: 10px" > Electricity</span></span>
+                            
                            
                         </h4>
                         <!-- <div class="action">Gorin:
@@ -430,8 +487,8 @@ background: #428bca;
                         </div> -->
                         
                         <div class="action">
-                            <button class="add-to-cart btn btn-default" type="button">book now</button>
-                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                            <button class="carousel-button" type="button" onclick="location.href = 'checkout.html';">BOOK NOW</button>
+                            <!-- <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button> -->
                         </div>
                     </div>
                 </div>
