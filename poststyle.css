@@ -335,10 +335,9 @@ select{
 }
 
 .bar_title{
-    padding: 80px;
-    padding-bottom: 20px;
+    padding: 55px;
     text-align: center;
-    background-image: url("assets/land2.jpg");
+    background-image: url("assets/land4.jpg");
     height: 200px;
 }
 .small_bar{
