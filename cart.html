@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<style type="text/css">
+
+    .nav-wrapper {
+        width: 100%;
+        background-color:#fff;
+        color:#000;
+        transition: all 0.25s ease;
+        position:fixed;
+        z-index: 10;
+        width:100%;
+        padding-top: 7px;
+        border-bottom: 2px solid #f8f8f8;
+
+    /* make sure to add vendor prefixes here */
+    }
+    .logo{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+
+   
+
+    .list-button{
+        float: left;
+        margin-top: 10px;
+    }
+    .register{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: 8px;
+    }
+    .register li{
+        display: inline;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+    .nav-menu .register button{
+        border: none;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+        .nav-menu .register button:hover{
+            color: orange;
+        }
+
+        .wish-list{
+        border-radius: 50%;
+        border: 2px solid orange;
+        padding: 4px;
+        cursor: pointer;
+        color: black;
+        }
+        .wish-list:hover{
+            background: orange;
+            color: white;
+        }
+
+
+
+    .nav-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+/**********************************************/
+
+
+/*****************globals*************/
+body {
+  font-family: 'open sans';
+}
+
+.param {
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+.param-inline dt {
+    display: inline-block;
+}
+.param dt {
+    margin: 0;
+    margin-right: 7px;
+    font-weight: 600;
+}
+.param-inline dd {
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+.param dd {
+    margin: 0;
+    vertical-align: baseline;
+} 
+
+.shopping-cart-wrap .price {
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+    display: block;
+}
+var {
+    font-style: normal;
+}
+
+.media img {
+    margin-right: 1rem;
+}
+.img-sm {
+    width: 150px;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+.img-wrap{
+  float: left;
+}
+
+.fas{
+  background: orange
+  color: white;
+}
+
+.footer-wrapper li{
+
+    text-decoration: none;
+    display: inline;
+   
+    padding: 0px 80px;
+}
+
+.amenity-info{
+    font-family: 'open sans', sans-serif;
+
+
+}
+.amenities{
+    padding: 20px;
+    color: white;
+    background: orange;
+    border-radius: 7%;
+}
+
+
+.checker {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checker input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 10;
+    height: 25px;
+    width: 25px;
+    background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.checker:hover input ~ .checkmark {
+    background-color: #2096ba;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checker input:checked ~ .checkmark {
+    background-color: orange;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checker input:checked ~ .checkmark:after {
+    display: block;
+}
+
+#compare-table{
+  display: none
+}
+
+/* Style the checkmark/indicator */
+.checker .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btnn{
+  background: orange;
+  color: black
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid orange;
+  padding: 5px; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 5%;
+
+}
+
+
+
+.btnn:hover{
+    background-color: orange;
+    color: white;
+    border: none;
+    border: 1px solid orange;
+   
+  
+}
+/*****************************/
+.icon-bar{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap:80px;
+  padding: 10px;
+}
+.icon-bar .each-icon{
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px grey;
+}
+
+
+.clearfix:after {
+       content: " "; /* Older browser do not support empty content */
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+}
+
+</style>
+
+    
+  </head>
+  <body>
+
+  <div class="main">
+  <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fas fa-shopping-cart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+      
+      
+
+<div class="container">
+<br> <br><br>
+<hr>
+
+
+
+<div class="card">
+<table class="table table-hover shopping-cart-wrap">
+<thead class="text-muted">
+<tr>
+  <th scope="col">Product</th>
+  <th scope="col" width="120">Quantity</th>
+  <th scope="col" width="120">Price</th>
+  <th scope="col" width="200" class="text-right">Action</th>
+  <th scope="col" width="150" class="text-right">Add to Compare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>
+<figure class="media">
+  <div class="img-wrap"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/897/89712052.jpg" class="img-thumbnail img-sm"></div>
+  <div class="img-info" >
+  
+    <h4 class="title text-truncate">Building BD212</h4>
+    <dl class="param param-inline small">
+      <dt><span class="fas fa-map-marker-alt"></span><strong> Location: </strong> </dt>
+      <dd>Kathmandu</dd>
+    </dl>
+    <dl class="param param-inline small">
+      <dt>Includes: </dt>
+      <dd>Water, Electricity</dd>
+    </dl></div>
+ 
+</figure> 
+  </td>
+  <td> 
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>  
+      <option>3</option>  
+      <option>4</option>  
+    </select> 
+  </td>
+  <td> 
+    <div class="price-wrap"> 
+      <var class="price">Rs. 14,500</var> 
+     
+    </div> <!-- price-wrap .// -->
+  </td>
+  <td class="text-right"> 
+  <a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"  style="background: orange; color: white; padding: 10px; border-radius: 10%"></i></a> 
+  <a href="" class="btn btn-outline-danger"> <span class="fas fa-times" style="background: orange; color: white; padding: 10px; border-radius: 10%; "><span style="font-family: 'open sans'"> <span style="font-family: 'open sans'"> Remove</span></span></span></a>
+  </td>
+  <td> 
+    <div class="compare"> 
+     <label class="checker"><h5><span style="padding-left: 30px">Compare</span></h5>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+     
+    </div> <!-- price-wrap .// -->
+  </td>
+</tr>
+<tr>
+  <td>
+<figure class="media">
+  <div class="img-wrap"><img src="https://t-ec.bstatic.com/images/hotel/max500/113/113244581.jpg" class="img-thumbnail img-sm"></div>
+  <figcaption class="media-body">
+    <h4 class="title text-truncate">Building BS222 </h4>
+    <dl class="param param-inline small">
+      <dt><span class="fas fa-map-marker-alt"></span><strong> Location: </strong> </dt>
+      <dd>Kathmandu</dd>
+    </dl>
+    <dl class="param param-inline small">
+      <dt>Includes: </dt>
+      <dd>Wifi, Water, Electricity</dd>
+    </dl>
+  </figcaption>
+</figure> 
+  </td>
+  <td> 
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>  
+      <option>3</option>  
+      <option>4</option>  
+    </select> 
+  </td>
+  <td> 
+    <div class="price-wrap"> 
+      <var class="price">Rs. 35,000</var> 
+      
+    </div> <!-- price-wrap .// -->
+  </td>
+  <td class="text-right"> 
+  <a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"  style="background: orange; color: white; padding: 10px; border-radius: 10%"></i></a> 
+  <a href="" class="btn btn-outline-danger btn-round"> <span class="fas fa-times"  style="background: orange; color: white; padding: 10px; border-radius: 10%"> <span style="font-family: 'open sans'"> Remove</span></span></a>
+  </td>
+   <td> 
+    <div class="compare"> 
+     <label class="checker"><h5><span style="padding-left: 30px">Compare</span></h5>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+     
+    </div> <!-- price-wrap .// -->
+  </td>
+</tr>
+<tr>
+  <td>
+<figure class="media">
+  <div class="img-wrap"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/989/98908057.jpg" class="img-thumbnail img-sm"></div>
+  <figcaption class="media-body">
+    <h4 class="title text-truncate">Building BS432 </h4>
+    <dl class="param param-inline small">
+      <dt><span class="fas fa-map-marker-alt"></span><strong> Location: </strong> </dt>
+      <dd>Kathmandu</dd>
+    </dl>
+    <dl class="param param-inline small">
+      <dt>Includes: </dt>
+      <dd>Wifi, Water, Parking, Electricity</dd>
+    </dl>
+  </figcaption>
+</figure> 
+  </td>
+  <td> 
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>  
+      <option>3</option>  
+      <option>4</option>  
+    </select> 
+  </td>
+  <td> 
+    <div class="price-wrap"> 
+      <var class="price">Rs. 45,000</var> 
+     
+    </div> <!-- price-wrap .// -->
+  </td>
+  <td class="text-right"> 
+    <a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"  style="background: orange; color: white; padding: 10px; border-radius: 10%"></i></a> 
+    <a href="" class="btn btn-outline-danger btn-round"> <span class="fas fa-times"  style="background: orange; color: white; padding: 10px; border-radius: 10%"> <span style="font-family: 'open sans'"> Remove</span></span></a>
+  </td>
+   <td> 
+    <div class="compare"> 
+     <label class="checker"><h5><span style="padding-left: 30px">Compare</span></h5>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+     
+    </div> <!-- price-wrap .// -->
+  </td>
+
+</tr>
+</tbody>
+</table>
+</div> <!-- card.// -->
+
+</div> 
+<div class="button-div" style="text-align: right; padding-right: 110px; padding-bottom: 30px">
+  
+
+
+<button class="btnn but-compare" id="compare-btn" onclick="showCompare()" style="background: #2096ba; border: 1px solid #2096ba">Compare items</button>
+<button class="btnn but-book" id="compare-btn" onclick="location.href='checkout.html'">Book Now</button>
+</div>
+
+<div id="compare-table">
+
+ <div class="icon-bar">
+            <div class="each-icon">
+            <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/897/89712052.jpg" style="height: 200px; width: 250px"><br/>
+            
+
+            <strong>Building BD212</strong><br><br/>
+            <strong><span class="fas fa-map-marker-alt"></span>Location: </strong> Kathmandu
+            <br/><br/>
+            <strong>Price:</strong> <span style="color: orange">Rs.14,500 </span><br><br/>
+            <strong>Includes</strong><br><br/>
+                           
+                            <span class="amenities fa fa-tint"><span class="amenity-info" style ="font-size: 14px" > Water</span></span><br/><br/>
+                                                     
+                            <span class="amenities fa fa-bolt"><span class="amenity-info" style ="font-size: 14px" > Electricity</span></span><br/><br/>
+
+
+
+
+            </div>
+
+             <div class="each-icon">
+             <img src="https://t-ec.bstatic.com/images/hotel/max500/113/113244581.jpg" style="height: 200px; width: 250px"><br/>
+             <strong>Building BD212</strong><br><br/>
+            <strong><span class="fas fa-map-marker-alt"></span>Location: </strong> Kathmandu
+            <br/><br/>
+            <strong>Price:</strong> <span style="color: orange">Rs.35,000 </span><br><br/>
+            <strong>Includes</strong><br><br/>
+                            <span class="amenities fa fa-wifi"><span class="amenity-info" style ="font-size: 14px" > Wifi</span></span><br/><br/>
+                            <span class="amenities fa fa-tint"><span class="amenity-info" style ="font-size: 14px" > Water</span></span><br/><br/>
+                                                     
+                            <span class="amenities fa fa-bolt"><span class="amenity-info" style ="font-size: 14px" > Electricity</span></span><br/><br/>
+</div>
+             
+
+             <div class="each-icon"><img src="https://s-ec.bstatic.com/images/hotel/max1024x768/989/98908057.jpg" style="height: 200px; width: 250px"><br/>
+             <strong>Building BD212</strong><br><br/>
+            <strong><span class="fas fa-map-marker-alt"></span>Location: </strong> Kathmandu
+            <br/><br/>
+            <strong>Price:</strong> <span style="color: orange">Rs.45,000 </span><br><br/>
+            <strong>Includes</strong><br><br/>
+                            <span class="amenities fa fa-wifi"><span class="amenity-info" style ="font-size: 14px" > Wifi</span></span><br/><br/>
+                            <span class="amenities fa fa-tint"><span class="amenity-info" style ="font-size: 14px" > Water</span></span><br/><br/>
+                            <span class="amenities fa fa-car"><span class="amenity-info" style ="font-size: 14px" > Parking</span></span><br/><br/>
+                           
+                            <span class="amenities fa fa-bolt"><span class="amenity-info" style ="font-size: 14px" > Electricity</span></span><br/><br/>
+
+             </div>
+  
+</div>
+
+
+  
+
+
+    <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px">
+    The Hipsters Ⓒ 2018<br/><br/>
+    <li>
+
+    About Us </li>
+
+<li>Terms Of Use</li>
+
+
+<li>Privacy Policies</li>
+        
+    </div>
+
+</div>
+
+<script type="text/javascript">
+  function showCompare() {
+   document.getElementById('compare-table').style.display = "block";
+}
+</script>
+
+  </body>
+
+</html>
+
+
+
