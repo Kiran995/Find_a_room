@@ -1,0 +1,590 @@
+<html>
+
+<head>
+  <title> Search Furniture </title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<style type="text/css">
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+
+  .nav-wrapper {
+    width: 100%;
+      background-color:white;
+      color:#fff;
+      transition: all 0.25s ease;
+      position:absolute;
+      z-index: 10;
+      width:100%;
+      padding: 5px;
+      position: fixed;
+
+    /* make sure to add vendor prefixes here */
+  }
+  .logo{
+    float: left;
+  }
+  .nav-menu{
+    float: right;
+  }
+
+  .nav-wrapper.past-main {
+      background-color:#fff;
+      color:black;
+      position: fixed;
+  }
+
+  .list-button{
+    float: left;
+    margin-top: 10px;
+  }
+  .register{
+    float: right;
+    padding-bottom: 10px;
+    margin-top: 8px;
+  }
+  .register li{
+    display: inline;
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+  .nav-menu .register button{
+    border: none;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+
+  }
+    .nav-menu .register button:hover{
+      color: orange;
+    }
+
+    .wish-list{
+    border-radius: 50%;
+    border: 2px solid orange;
+    padding: 4px;
+    cursor: pointer;
+    color: black;
+    }
+    .wish-list:hover{
+      background: orange;
+    }
+
+
+
+  .nav-button {
+  background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+.nav-button.past-main{
+  color: black;
+
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.banner-text{
+  padding-top: 190px;
+  text-align: center;
+  font-size: 42px;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.category-btn{
+    text-align: center;
+  }
+
+  .list-btn{
+    background-color: orange;
+      color: white;
+      font-size: 16px;
+      padding: 12px 42px;
+      border: none;
+
+  }
+  .list-btn:hover {
+      background-color: white; 
+      color: black; 
+          
+  }
+
+    
+  .icon-bar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:100px;
+    padding: 30px;
+  }
+  .icon-bar .each-icon{
+    display: inline-block;
+    text-align: center;
+  }
+  hr{
+    border-color:#dcdcdc; 
+    border-style:solid;
+    margin: 30px;
+
+
+    
+  }
+
+  /****************************************************************************/
+.sel{
+      margin: 10px;
+      display: inline-flex;
+      margin-right: 30px;
+    }
+
+/**********************************************************************************/
+
+.fifth-section{
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    grid-gap: 10px;
+    padding: 40px;
+
+  }
+  
+
+
+.fifth-section .products{
+    display: inline-block;
+    width: 300px;
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+    padding: 1% 1%;
+    margin:2% 3%;
+    padding-right: 10px;
+
+}
+.fifth-section .product-image{
+    height: 55%;
+    margin: 6%;
+    padding: 0% 0%;
+    transition: 300ms linear;
+    position: relative;
+}
+.fifth-section .product-image img{
+    width: 260px;
+    height: 250px;
+}
+.fifth-section .product-shop{
+    height: 45%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.fifth-section .product-shop h1{
+    color: #df6e21;
+    font-size: 1em;
+    margin-top: 3%;
+    font-weight: bold;
+    text-align: center;
+}
+.fifth-section .product-shop h2{
+    font-size: 1.2em;
+    font-weight:bolder;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.fifth-section .product-shop del{
+    margin-left: 15%;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: #908e8e;
+}
+.carousel-button{
+    padding: 0px 0px;
+    border-style: none;
+    height: 40px;
+    width: 75%;
+    margin-left: 12.5%;
+}
+.carousel-button{
+    background-color: #2096ba;
+    padding: 0px 0px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 0.8em;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    z-index: 2;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.carousel-button::before{
+    content: '';
+    position: absolute;
+    border: #2096ba solid 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s ease-out;
+    transition-property: top, right, bottom, left;
+}
+
+.carousel-button a{
+    text-decoration: none;
+    color: white;
+    height: 30px;
+}
+ .carousel-button:hover::before{
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;    
+}
+
+.fifth-section .product-image:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+}
+
+.fifth-section .product-image:hover button{
+    display: block;
+    height: 40px;
+    width: 60%;
+    top: 40%;
+    left: 18%;
+    position: absolute;
+    background: #2096ba;
+    transition: 0.4s ease-out;
+}
+.fifth-section .product-image button{
+    
+    border-style: none;
+    display: none;
+}
+
+.fifth-section .product-image a{
+  text-decoration: none;
+    color: white;
+}
+
+.fifth-section .tab-pane{
+    height: 400px;
+    margin-top: 80px;
+}
+.fifth-section .tab-content{
+    height: 90%;
+    background-color: white;
+    margin-top: 1%;
+}
+.fifth-section-mobile-view{
+    display: none;
+}
+
+
+.footer-wrapper li{
+
+  text-decoration: none;
+  display: inline;
+  padding: 0px 80px;
+}
+.first-block a{
+  color: black
+
+}
+a{
+  text-decoration: none
+}
+
+
+  .clearfix:after {
+     content: " "; /* Older browser do not support empty content */
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+}
+
+
+/*serach bar*/
+.search-bar {
+  position: relative;
+  
+}
+
+.search-bar.active .input-text {
+  max-width: 100%;
+  height: 50%;
+  border: 1px solid #ccc;
+  background: #df6e21;
+}
+
+.search-bar .icon {
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 13px 15px 13px 11px;
+}
+
+.search-bar .input-text {
+  max-width: 0;
+  border: 0;
+  border-color: #df6e21;
+  height: 20px;
+  padding: 8px 6px 8px 35px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+input[type=text]{
+  margin: 10px;
+  width:88%;
+  border:2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:0.3s;
+}
+
+input[type=text]:focus{
+  border-color:#df6e21;
+  box-shadow: 0 0 8px 0 #df6e21;
+}
+
+
+.footer-wrapper li{
+
+  text-decoration: none;
+  display: inline;
+  padding: 0px 80px;
+;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+  <nav class="nav-wrapper clearfix">
+      <div class="logo"><img src="logo.png" style="height: 45px; width: 70px"></div>
+      <div class="nav-menu">
+        <button class = "btn nav-button" onclick="location.href='post_home.html'"> List your Property</button>
+        <button class = "btn nav-button" onclick="location.href='furniture_sell.html'"> Sell your Furniture</button>  
+        <ul class = "register" >
+        <li><span class="wish-list fas fa-shopping-cart" onclick="location.href='cart.html'"></span></a></li>
+          <li><button>Register</button></li>
+          <li><button>Login</button></li>
+        </ul> 
+        <!-- <div class="register">Register</div>
+        <div class="login">Login  </div> -->
+        </div>
+    </nav>
+
+<div class="sel" style="margin-top:70px; float:right;">
+      <h1 style="margin-right:100px"> Do your 
+        <span style="color:orange">best deal with us</span></h1>
+      <div class='search-bar active'>
+        <i class="icon fa fa-search" style="margin-top:2px;"></i>
+        <input class="input-text" type="text" name="Search" placeholder="Search Your Category" style='background-color: white; height:40px;'>
+      </div>
+    <div class='search-bar active' style="padding-top: 8px;">
+        <i class="icon fa fa-money-bill-alt " style="margin-top:2px;"></i>
+        <input class="input-text" type="number" name="Search" placeholder="Price" style='background-color: white; height:40px;'>
+      </div>
+    </div>
+
+<div class="fifth-section">
+           
+                 
+                
+                  <div class="tab-pane">
+                    <div class="products row ">
+                       <div class="product-image">
+                       
+                        <button><a href="product.html">VIEW MORE</a></button>
+                          
+                        
+                       <img src="assets/one.jpg" alt="">
+                       
+                        </div>
+                        
+                        <div class="product-shop ">
+                           <h1>SOFA</h1>
+                               <h2>Rs. 4000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+
+
+                    <div class="tab-pane">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <button><a href="product.html">VIEW MORE</a></button>
+                       <img src="assets/bed.jpg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>BED</h1>
+                               <h2>Rs. 5000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+		
+                    <div class="tab-pane">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <button><a href="product.html">VIEW MORE</a></button>
+                       <img src="assets/carpet.jpeg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>CARPET</h1>
+                               <h2>Rs.3000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+
+                    <div class="tab-pane">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <button><a href="product.html">VIEW MORE</a></button>
+                       <img src="assets/chair.jpg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>CHAIR</h1>
+                               <h2>Rs.2000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+                    <br/><br/>
+
+	</div>
+
+<div class="fifth-section">
+           
+                 
+                
+                  <div class="tab-pane" style="margin-top:0px;">
+                    <div class="products row ">
+                       <div class="product-image">
+                       
+                        <button><a href="product.html">VIEW MORE</a></button>
+                          
+                        
+                       <img src="assets/four.jpg" alt="">
+                       
+                        </div>
+                        
+                        <div class="product-shop ">
+                           <h1>DRAWER</h1>
+                               <h2>Rs.5000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+
+
+                    <div class="tab-pane" style="margin-top:0px;">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <button><a href="product.html">VIEW MORE</a></button>
+                       <img src="assets/table.jpeg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>TABLE</h1>
+                               <h2>Rs. 5000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+    
+                    <div class="tab-pane" style="margin-top:0px;">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <button><a href="product.html">VIEW MORE</a></button>
+                       <img src="assets/rack.jpg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>Rack</h1>
+                               <h2>Rs.4000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+
+                    <div class="tab-pane" style="margin-top:0px;">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <button><a href="product.html">VIEW MORE</a></button>
+                       <img src="assets/round_table.jpeg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>Table </h1>
+                               <h2>Rs.4000</h2>
+                            <button class="carousel-button" onclick="location.href = 'checkout.html';">BUY NOW</a></button>
+                         </div>
+                    </div>
+                    </div>
+                    <br/><br/>
+
+  </div>
+
+  <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px; margin-top:30px;">
+  The Hipsters Ⓒ 2018<br/><br/>
+  <li>
+
+  About Us </li>
+
+<li>Terms Of Use</li>
+
+
+<li>Privacy Policies</li>
+    
+  </div>
+
+</body>
+</html>

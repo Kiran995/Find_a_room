@@ -198,6 +198,7 @@
 /*****************globals*************/
 body {
   font-family: 'open sans';
+  overflow-x: hidden; 
 }
 .container-fluid{
     background: #fdfdfd;
@@ -504,6 +505,8 @@ input[type=text]:focus{
   box-shadow: 0 0 8px 0 #df6e21;
 }
 
+
+
 </style>
 
     
@@ -525,45 +528,67 @@ input[type=text]:focus{
 
         
     <div class="sel" style="margin-top:70px; float:right;">
-      <h1 style="margin-top: 5px;margin-right: 125px;"> Do your best deal with us</h1>
+      <h1 style="text-align:center;"> Do your best deal with us</h1>
       <div class='search-bar active'>
-        <i class="icon fa fa-search" style="margin-top:2px;"></i>
+        <i class="icon fa fa-search" style="margin-top:-5px;"></i>
         <input class="input-text" type="text" name="Search" placeholder="Search Your Category" style='background-color: white; height:40px;'>
       </div>
     <div class='search-bar active' style="padding-top: 8px;">
-        <i class="icon fa fa-money-bill-alt " style="margin-top:2px;"></i>
+        <i class="icon fa fa-money-bill-alt " style="margin-top:-5px;"></i>
         <input class="input-text" type="number" name="Search" placeholder="Price" style='background-color: white; height:40px;'>
       </div>
     </div>
     </div>
+<!--new item-->
+  <div class="fifth-sections">
+    <div class="product-image">
+      <img src="http://nepalhomesearch.com/images/listing_photos/6378_DSC07048.jpg" alt="">
+    </div>
+    <div class="product-shop ">
+      <h1>Building DEF </h1>
+      <h2>$25.4<del>$ 29.1</del></h2>
+      <button class="carousel-button" onclick="location.href = 'checkout.html';"><a href="checkout.html">BOOK NOW</a></button>
+    </div>
+  </div>
+
+<!--new item-->
 
   <div class="item" >
       <div class="row" style="padding-top:155px;">
+        <div class="furnitures">
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/one.jpg" alt="Image" style="max-width:100%;"></a>
           
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>SOFA</strong></h4>
-        <h4><strong>PRICE: Rs. 4000</strong></h4>
+        <h5><strong>PRICE: Rs. 4000</strong></h5>
         </div>
-
+      </div>
+      <div class="furnitures">
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/two.jpeg" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>DINNIG SET</strong></h4>
-        <h4><strong>PRICE: Rs. 4000</strong></h4>
+        <h5><strong>PRICE: Rs. 4000</strong></h5>
         </div>
+
+      </div>
+      <div class="furnitures">
 
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/bed.png" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
           <h4><strong>BED</strong></h4>
-          <h4><strong>PRICE: Rs. 4000</strong></h4>
+          <h5><strong>PRICE: Rs. 4000</strong></h5>
         
         </div>
+      </div>
+
+      <div class="furnitures">
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/four.jpg" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>DRAWER</strong></h4>
-        <h4><strong>PRICE: Rs. 4000</strong></h4>
+        <h5><strong>PRICE: Rs. 4000</strong></h5>
         
         </div>
+      </div>
       </div><!--.row-->
   </div><!--.item-->
 
@@ -572,25 +597,25 @@ input[type=text]:focus{
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/one.jpg" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>SOFA</strong></h4>
-        <h4><strong>PRICE: Rs. 4000</strong></h4>
+        <h5><strong>PRICE: Rs. 4000</strong></h5>
         </div>
 
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/two.jpeg" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>DINNIG SET</strong></h4>
-        <h4><strong>PRICE: Rs. 4000</strong></h4>
+        <h5><strong>PRICE: Rs. 4000</strong></h5>
         </div>
 
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/bed.png" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
           <h4><strong>BED</strong></h4>
-          <h4><strong>PRICE: Rs. 4000</strong></h4>
+          <h5><strong>PRICE: Rs. 4000</strong></h5>
         
         </div>
         <div class="col-md-3"><a href="#" class="thumbnail"><img src="assets/four.jpg" alt="Image" style="max-width:100%;"></a>
         <button onclick="window.location.href='furniture_view.html';">VIEW MORE</a></button>
         <h4><strong>DRAWER</strong></h4>
-        <h4><strong>PRICE: Rs. 4000</strong></h4>
+        <h5><strong>PRICE: Rs. 4000</strong></h5>
         
         </div>
       </div><!--.row-->

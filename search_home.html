@@ -6,6 +6,7 @@
     <link rel='stylesheet' type='text/css' href='style.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   </head>
   <body>
     <nav class="nav-wrapper clearfix">
@@ -13,7 +14,7 @@
             <div class="nav-menu">
                 <button class = "btn nav-button"> List your Property</button>   
                 <ul class = "register" >
-                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                <li><a><span class="wish-list fas fa-shopping-cart" ></span></a></li>
                     <li><button>Register</button></li>
                     <li><button>Login</button></li>
                 </ul>   
@@ -28,7 +29,7 @@
       <fieldset id='field'>
         <legend>Choose Your Dream House</legend>
 
-        <div class="car">
+        <div class="cara">
           <button class="btn"><i class="fa fa-bed"></i> Room</button>
           <button class="btn"><i class="fa fa-bank"></i> Flat</button>
           <button class="btn"><i class="fa fa-building"></i> Apartment</button>
@@ -45,10 +46,12 @@
         <input class="input-text" type="text" name="Search" placeholder="Search By Location" style='background-color: white;'>
       </div>
 
+      <div class="sp">
      <div class="space">
           
           <label>Shared Space</label>
       </div>  
+    </div>
       
       
 
@@ -61,12 +64,17 @@
   </div>
   <div class="row slider-labels">
     <div class="col-xs-6 caption">
-      <strong style="margin-left: 200px;">Min:</strong> <span id="slider-range-value1"></span>
+      <strong style="margin-left: 150px;">Min:</strong> <span id="slider-range-value1"></span>
     </div>
     <div class="col-xs-6 text-right caption">
-      <strong>Max:</strong> <span id="slider-range-value2"></span>
+      <strong style="margin-left: 300px;">Max:</strong> <span id="slider-range-value2"></span>
     </div>
   </div>
+
+  <div class="space">
+          
+          <label>More than 1 lakh</label>
+      </div> 
   <div class="row">
     <div class="col-sm-12">
       <form>
@@ -89,102 +97,64 @@
           
         </div>
       </fieldset>
-      <fieldset class="pref"> <legend>Do you have any Preferences?</legend><textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length=""></textarea></fieldset>
+      <div class="pref"> <legend>Do you have any Preferences?</legend><textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length="" style="margin:20px;"></textarea></div>
 
       
 
-      <button class="but" type="submit" name="action">SEARCH</button>
+      <button class="but" type="submit" name="action" style="margin-right:20px;">SEARCH</button>
 
-  <div class="places-found">
-      <h2 class="sub-title"> Places Found </h2>
-      <div class="first-section">
-
-           <div class="first-block clearfix">
-               <div class="content">
-                   <div class="block-title">
-                       <div class="F">F</div>eaured
-                   </div> 
-                   <div class="block-subtitle">
-                       <div>
-                           
-                       </div>
-
-                   </div>
-                </div>
-                                <img src="http://www.aprar.net/7/2015/10/elegant-wooden-kitchen-cabinet-modern-company-building-design-that-has-cream-modern-ceramics-floor-can-add-the-beauty-inside-modern-house-design-ideas.jpg" alt="">
-                                <div class="block-info">
-                               <p>lekhna baki<br/>xa
-                                </p>
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
-                                </div>
-                                
-
+      <div class="places-found">
+        <h2 class="sub-title"> Places Found </h2>
+        <div class="one-item">
+            <div class="block-one" style="display:flex;">
+                <img src="http://www.aprar.net/7/2015/10/elegant-wooden-kitchen-cabinet-modern-company-building-design-that-has-cream-modern-ceramics-floor-can-add-the-beauty-inside-modern-house-design-ideas.jpg" alt="">
                 
-           </div>
-
-
-           <div class="first-block">
-               <div class="content">
-                   <div class="block-title">
-                       <div class="F">F</div>eaured
-                   </div> 
-                   <div class="block-subtitle">
-                       <div>
-                           
-                       </div>
-
-                   </div>
+                <div class="block-info" style="padding-left: 15px; padding-top: 10px">
+                    <h4><strong>Adarsh Niwas</strong></h4><br/>
+                    <p>
+                      <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Lagankhel, Kathmandu<br/><br/>
+                      <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
+                      A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                    </p><br/>
+                    <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
                 </div>
-                                <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/113/113244581.jpg" alt="">
- <div class="block-info">
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
-                                </div>
-                
-           </div>
-           <div class="first-block">
-               <div class="content">
-                   <div class="block-title">
-                       <div class="F">F</div>eaured
-                   </div> 
-                   <div class="block-subtitle">
-                       <div>
-                           
-                       </div>
+            </div>
+        </div>
 
-                   </div>
+        <div class="one-item">
+            <div class="block-one" style="display:flex;">
+                <img src="http://www.aprar.net/7/2015/10/elegant-wooden-kitchen-cabinet-modern-company-building-design-that-has-cream-modern-ceramics-floor-can-add-the-beauty-inside-modern-house-design-ideas.jpg" alt="">
+                
+                <div class="block-info" style="padding-left: 15px; padding-top: 10px">
+                    <h4><strong>Adarsh Niwas</strong></h4><br/>
+                    <p>
+                      <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Lagankhel, Kathmandu<br/><br/>
+                      <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
+                      A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                    </p><br/>
+                    <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
                 </div>
-                                <img src="http://nepal.rentline.co/wp-content/uploads/awpcp/2-Bedroom-Apartment-For-Rent-in-Sunrise-Tower-Dhobighat-Lalitpur-2-large.jpg" alt="">
- <div class="block-info">
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
-                                </div>
-                
-           </div>
-           <div class="first-block">
-               <div class="content">
-                   <div class="block-title">
-                       <div class="F">F</div>eaured
-                   </div> 
-                   <div class="block-subtitle">
-                       <div>
-                           
-                       </div>
+            </div>
+        </div>
 
-                   </div>
+        <div class="one-item">
+            <div class="block-one" style="display:flex;">
+                <img src="http://www.aprar.net/7/2015/10/elegant-wooden-kitchen-cabinet-modern-company-building-design-that-has-cream-modern-ceramics-floor-can-add-the-beauty-inside-modern-house-design-ideas.jpg" alt="">
+                
+                <div class="block-info" style="padding-left: 15px; padding-top: 10px">
+                    <h4><strong>Adarsh Niwas</strong></h4><br/>
+                    <p>
+                      <span class="fas fa-map-marker-alt"></span><strong> Location: </strong> Lagankhel, Kathmandu<br/><br/>
+                      <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
+                      A beautiful, attractive and semi-furnished BHK building on sale which has ...
+                    </p><br/>
+                    <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
                 </div>
-                                <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/102/102347634.jpg" alt="">
- <div class="block-info">
-                                <button class="carousel-button"><a href="#">BOOK NOW</a></button>
-                                    
-                                </div>
+            </div>
+        </div>
+      </div>
 
-                
-           </div>
-           
-  </div>
-</div>
+  
 </div>
 
       <!--The div element for the map -->
@@ -284,7 +254,7 @@ select.listen('change', () => {
 // Initialize slider:
 $(document).ready(function() {
   $('.noUi-handle').on('click', function() {
-    $(this).width(50);
+    $(this).width(500);
   });
   var rangeSlider = document.getElementById('slider-range');
   var moneyFormat = wNumb({
@@ -293,11 +263,11 @@ $(document).ready(function() {
     prefix: 'Rs.'
   });
   noUiSlider.create(rangeSlider, {
-    start: [500000, 1000000],
+    start: [5000, 20000],
     step: 1,
     range: {
       'min': [1000],
-      'max': [500000]
+      'max': [100000]
     },
     format: moneyFormat,
     connect: true
