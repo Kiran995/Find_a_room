@@ -169,7 +169,35 @@
   }
 
   /****************************************************************************/
+.uploader {position:relative; text-align: center;
+    margin: 0 auto;
 
+   overflow:hidden; width:90%; height:170px; background:#f3f3f3; border:2px dashed #dcdcdc;
+ }
+
+
+#filePhoto{
+  margin: 0 auto;
+    position:absolute;
+    width:100%;
+    height:170px;
+    top:-50px;
+    left:0;
+    z-index:2;
+    opacity:0;
+    cursor:pointer;
+    padding: 10px;
+    
+}
+
+.uploader img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin: 10px;
+  border: 1px solid #dddddd;
+
+}
 
 /**********************************************************************************/
 
@@ -421,7 +449,7 @@ input[type=text]:focus{
     font-family: Georgia, "Times New Roman", Times, serif;
     
     display: inline-block;
-    padding-left: 250px;
+    padding-left: 200px;
 
 }
 .inside{
@@ -487,7 +515,12 @@ input[type=text]:focus{
     background: #2096ba;
     color: white;
 }
-
+.container{
+  box-shadow: 0px 0px 15px 0px #D6D6D6;
+  margin: 20px;
+  margin-right: 120px;
+  margin-left: 120px;
+}
 
 </style>
 
@@ -510,7 +543,12 @@ input[type=text]:focus{
         <div class="login">Login  </div> -->
         </div>
     </nav>
-    <div style="text-align: center; padding-bottom: 10px; padding-top:100px;"><h2>TELL US <span style="color: orange">ABOUT YOURSELF </span></h2>
+
+    <div style="text-align: center; padding-bottom: 10px; padding-top:100px;"><h1>RENT/ SENT <span style="color: orange">YOUR PROPERTY</span></h1>
+    <p>*Rent or Sell your property* </p>
+    </div>
+    <div class="container">
+    <div style="text-align: center; padding-bottom: 10px; padding-top:10px;"><h2>TELL US <span style="color: orange">ABOUT YOURSELF </span></h2>
     </div>
  <div class="form-style-5">
   <!--<h2>SPACES <span style="color: orange">AVAILABLE </span></h2></div>-->
@@ -536,7 +574,7 @@ input[type=text]:focus{
                 </div>
 </div>
 
-<div style="text-align: center; padding-bottom: 10px; padding-top:60px;"><h2>WHAT DO <span style="color: orange">YOU HAVE </span></h2>
+<div style="text-align: center; padding-bottom: 10px; padding-top:60px;"><h2>WHAT DO <span style="color: orange">YOU HAVE? </span></h2>
     </div>
 
 <div class="fifth-section">
@@ -571,20 +609,6 @@ input[type=text]:focus{
                         </div>
                         <div class="product-shop ">
                            <h1>BED</h1>
-                               
-                            
-                         </div>
-                    </div>
-                    </div>
-		
-                    <div class="tab-pane">
-                    <div class="products row ">
-                       <div class="product-image">
-                       <div class="write"><input type="number" name="Your Price" placeholder="Your Price"></div>
-                       <img src="assets/carpet.jpeg" alt="">
-                        </div>
-                        <div class="product-shop ">
-                           <h1>CARPET</h1>
                                
                             
                          </div>
@@ -645,12 +669,52 @@ input[type=text]:focus{
                          </div>
                     </div>
                     </div>
-    
+
                     <div class="tab-pane">
                     <div class="products row ">
                        <div class="product-image">
                        <div class="write"><input type="number" name="Your Price" placeholder="Your Price"></div>
-                       <img src="assets/round_table.jpeg" alt="">
+                       <img src="assets/rack.jpg" alt="">
+                        </div>
+                        <div class="product-shop ">
+                           <h1>CUPBOARD</h1>
+                              
+                            
+                         </div>
+                    </div>
+                    </div>
+                    <br/><br/>
+
+  </div>
+  <div class="fifth-section">
+           
+                 
+                
+                  <div class="tab-pane">
+                    <div class="products row ">
+                       <div class="product-image">
+                       
+                        <div class="write"><input type="number" name="Your Price" placeholder="Your Price"></div>
+                          
+                        
+                       <img src="assets/carpet.jpeg" alt="">
+                       
+                        </div>
+                        
+                        <div class="product-shop ">
+                           <h1>CARPET</h1>
+                               
+                        
+                         </div>
+                    </div>
+                    </div>
+
+
+                    <div class="tab-pane">
+                    <div class="products row ">
+                       <div class="product-image">
+                       <div class="write"><input type="number" name="Your Price" placeholder="Your Price"></div>
+                       <img src="assets/table.jpeg" alt="">
                         </div>
                         <div class="product-shop ">
                            <h1>TABLE</h1>
@@ -680,12 +744,20 @@ input[type=text]:focus{
  <div style="text-align: center; padding-bottom: 10px; "><h2>SEND US <span style="color: orange">YOUR ITEM PHOTO </span></h2>
     </div>
 
+    <div class="uploader">
+
+<input type="file" accept="image/*" multiple id="filePhoto" placeholder="DOUBLE CLICK TO ADD PHOTOS"> <h6>DOUBLE CLICK TO ADD PHOTOS</h6>
+</div>
+
+
+
+
 
 <div class="send">
                     <button> SELL </button>
                 </div>
 
-
+</div>
   <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px; margin-top:30px;">
   The Hipsters Ⓒ 2018<br/><br/>
   <li>
@@ -698,6 +770,26 @@ input[type=text]:focus{
 <li>Privacy Policies</li>
     
   </div>
+    <script type="text/javascript">
+    
+   filePhoto.onchange = function(e) {
+      for (let i = 0; i < this.files.length; i++) {
+        let url = URL.createObjectURL(this.files[i]);
+        let img = new Image();
+        img.src = url;
+        var b = document.getElementsByClassName("uploader")
+        b[0].appendChild(img);
+        img.onload = function() {
+          URL.revokeObjectURL(this.src);
+        }
+        console.log(this.files[0].name);
+      }
+}
+
+
+
+
+  </script>
 
 </body>
 </html>

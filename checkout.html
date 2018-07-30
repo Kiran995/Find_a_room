@@ -369,10 +369,9 @@ a:hover {
 
 }
 
-.tab-pane a{
-  color:white;
+.btn-primary a{
+  color: white;
 }
-
 
 
 </style>
@@ -383,13 +382,14 @@ a:hover {
 
   <div class="main">
   <nav class="nav-wrapper clearfix">
-            <div class="logo">LOGO</div>
-            <div class="nav-menu">
-                <button class = "btn nav-button"> List your Property</button>   
-                <ul class = "register" >
-                <li><a><span class="wish-list fas fa-shopping-cart" ></span></a></li>
-                    <li><button>Register</button></li>
-                    <li><button>Login</button></li>
+            <div class="logo" onclick="location.href='mainPage.html'"><img src="logo.png" style="height: 45px; width: 70px"></div>
+      <div class="nav-menu">
+        <button class = "btn nav-button" onclick="location.href='post_home.html'"> List your Property</button>  
+        <button class = "btn nav-button" onclick="location.href='furniture_sell.html'"> Sell your Furnitures</button> 
+        <ul class = "register" >
+        <li><span class="wish-list fas fa-shopping-cart" onclick="location.href='cart.html'"></span></a></li>
+          <li><button>Register</button></li>
+          <li><button>Login</button></li>
                 </ul>   
                 <!-- <div class="register">Register</div>
                 <div class="login">Login    </div> -->
@@ -639,18 +639,14 @@ a:hover {
                         <h3 style="text-align: center; padding-bottom: 30px">Thank You for Choosing Us</h3>
                         <p>You have successfully booked your new space.</p>
                         <p>Our representative will be contacting you to take it further.</p>
-                        
+
                         <h2>Do you want furniture?</h2>
-                        <div class="wantfurniture" style="display:flex; margin-left:500px;">
-                        <button class="btn btn-primary"><a href="furnituresearch.html">YES</a></button>
-                        <div style="margin-left:60px;">
-                        <button class="btn btn-primary"><a href="mainPage.html">NO</a></button>
-                        </div>
-                      </div>
-                        <ul class="list-inline pull-right" style="padding-top: 150px">
+                        <button class="btn btn-primary" style="margin-left:200px;"><a href="furnituresearch.html">YES</a></button>
+                        <button class="btn btn-primary" style="margin-left:60px;"><a href="mainPage.html">NO</a></button>
+                        
+                        <ul class="list-inline pull-right" style="padding-top: 100px">
                             <li>
-                            <button class="btn btn-primary">
-                            <a href="mainPage.html" >Back to main page</a></button></li></ul>
+                            <button class="btn btn-primary"><a href="mainPage.html">Back to main page</a></button></li></ul>
                     </div>
                     <div class="clearfix"></div>
                 </div>
