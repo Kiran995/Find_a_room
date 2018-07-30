@@ -250,7 +250,7 @@ input[type=text]:focus{
     font-family: Georgia, "Times New Roman", Times, serif;
     
     display: inline-block;
-    padding-left: 250px;
+    padding-left: 150px;
 
 }
 .inside{
@@ -306,7 +306,7 @@ input[type=text]:focus{
     padding-top: 30px;
     display: block;
     list-style: none;
-    padding-left: 250px;
+    padding-left: 150px;
 }
 .form-style-1 label{
     margin:0 0 3px 0;
@@ -335,29 +335,16 @@ select{
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     outline: none; 
+    height: 40px;
 }
-.form-style-1 input[type=text]:focus,
-.form-style-1 input[type=date]:focus,
-.form-style-1 input[type=datetime]:focus,
-.form-style-1 input[type=number]:focus,
-.form-style-1 input[type=search]:focus,
-.form-style-1 input[type=time]:focus,
-.form-style-1 input[type=url]:focus,
-.form-style-1 input[type=email]:focus,
-.form-style-1 textarea:focus,
-.form-style-1 select:focus{
-    -moz-box-shadow: 0 0 8px #88D5E9;
-    -webkit-box-shadow: 0 0 8px #88D5E9;
-    box-shadow: 0 0 8px #88D5E9;
-    border: 1px solid black;
-}
+
 .form-style-1 .field-divided{
-    width: 320px;
+    width: 300px;
     margin-bottom: 30px;
 }
 
 .form-style-1 .field-long{
-    width: 62%;
+    width: 78%;
 
 }
 .form-style-1 .field-select{
@@ -373,6 +360,7 @@ select{
     padding: 8px 15px 8px 15px;
     border: 1px solid #2096ba;
     color: #2096ba;
+    height: 43px;
 }
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
     background: #2096ba;
@@ -380,6 +368,7 @@ select{
     color:white;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
+    height: 43px;
 }
 .form-style-1 .required{
     color:none;
@@ -393,6 +382,12 @@ select{
   padding-top: 20px;
 }
 
+.container{
+  box-shadow: 0px 0px 15px 0px #D6D6D6;
+  margin: 20px;
+  margin-right: 120px;
+  margin-left: 120px;
+}
 
 </style>
 
@@ -419,7 +414,7 @@ select{
     <p>*Post your space to rent* </p>
     </div>
 
-
+<div class="container">
     <div style="text-align: center; padding-bottom: 10px; padding-top:10px;"><h2>PERSONAL <span style="color: orange"> INFORMATION</span></h2>
     </div>
  <div class="form-style-5">
@@ -452,7 +447,7 @@ select{
     <div class="one">
     <li>
         <label>Choose your Property Type</label>
-        <select name="field4" class="field-divided" style="margin-right:80px;">
+        <select name="field4" class="field-divided" style="margin-right:80px; margin-left:20px;">
         <option value="Advertise">Room</option>
         <option value="Partnership">Flat</option>
         <option value="Partnership">Apartment</option>
@@ -465,24 +460,24 @@ select{
     </li>
   </div>
   <div class="two">
-    <li style="margin-bottom:30px;">
+    <li style="margin-bottom:30px; margin-left:20px;">
       <label>No of:</label>
-      <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:150px;"/>
-      <input type="number" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:150px;"/>
-      <input type="number" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:150px;"/>
-      <input type="number" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:150px;"/>
+      <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:175px;"/>
+      <input type="number" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:175px;"/>
+      <input type="number" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:175px;"/>
+      <input type="number" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:175px;"/>
 
     </li>
     <li>
-      <label>Price <span class="required">*</span></label><input type="number" name="field1" class="field-divided" placeholder="Price" style="margin-bottom:25px;"/>
+      <label>Price <span class="required">*</span></label><input type="number" name="field1" class="field-divided" placeholder="Price" style="margin-bottom:25px; margin-left:20px;"/>
     </li>
     <li>
         <label>Duration (From - To)</label>
-        <input type="date" name="field3" class="field-divided" placeholder="From" style="margin-bottom:25px;"/>&nbsp;<input type="date" name="field3" class="field-divided" placeholder="To" style="margin-bottom:25px;"/>
+        <input type="date" name="field3" class="field-divided" placeholder="From" style="margin-bottom:25px; margin-left:20px;"/>&nbsp;<input type="date" name="field3" class="field-divided" placeholder="To" style="margin-bottom:25px; "/>
     </li>
     <li>
         <label>Description <span class="required">*</span></label>
-        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+        <textarea name="field5" id="field5" class="field-long field-textarea" style="margin-left:20px;"></textarea>
     </li>
     <li>
         <label style="margin-top:25px;">Photos <span class="required">*</span></label>
@@ -499,15 +494,15 @@ select{
     <div class="three">
     <li>
         <label>Preferences <span class="required">*</span></label>
-        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+        <textarea name="field5" id="field5" class="field-long field-textarea" style="margin-left:20px;"></textarea>
     </li>
     <li style="margin-top:25px; float: right; ">
-        <input type="submit" value="Submit" style="margin-right:400px;"/>
+        <input type="submit" value="Submit" style="margin-right:180px;"/>
   </li>
 </div>
   </ul>
 
-
+</div>
 
   <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px; margin-top:30px;">
   The Hipsters Ⓒ 2018<br/><br/>

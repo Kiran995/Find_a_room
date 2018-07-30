@@ -315,7 +315,7 @@ body {
 
 input[type=text]{
   margin: 10px;
-  width:88%;
+  width:92%;
   border:2px solid #aaa;
   border-radius: 4px;
   margin: 8px 0;
@@ -1113,4 +1113,8 @@ label:hover:before {
 .one-item{
   box-shadow: 0px 0px 15px 0px #D6D6D6;
   margin: 30px;
+}
+
+#compare-table{
+  display: none
 }

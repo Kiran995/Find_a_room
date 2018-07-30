@@ -27,7 +27,9 @@
     <div class="">
     <div class='vertical-menu'>
       <fieldset id='field'>
-        <legend>Choose Your Dream House</legend>
+         <div style="text-align: center; padding-bottom: 20px; padding-top: 20px; "><h2>CHOOSE YOUR <span style="color: orange">DREAM HOUSE </span></h2>
+    </div>
+       
 
         <div class="cara">
           <button class="btn"><i class="fa fa-bed"></i> Room</button>
@@ -85,24 +87,27 @@
   </div>
 </div>
       <fieldset class='available'>
-        <legend>Facilities you want in your dream house </legend>
-
+         <div style="text-align: center; padding-bottom: 20px; padding-top: 20px; "><h2>FACILITIES YOU WANT <span style="color: orange">IN YOUR DREAM HOUSE </span></h2>
+    </div>
         <div class="car">
 
           <button class="btn"><i class="fa fa-wifi"></i> Wifi</button>
           <button class="btn"><i class="fa fa-bus"></i> Parking</button>
           <button class="btn"><i class="fa fa-tv"></i> Television</button>
           <button class="btn"><i class="fa fa-bus"></i> Transportation</button>
-          <button class="btn"><i class="fa fa-hand-holding-water"></i> Water</button>
+          <button class="btn"><i class="fa fa-bed"></i> Semi-Furnished</button>
           
         </div>
       </fieldset>
-      <div class="pref"> <legend>Do you have any Preferences?</legend><textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length="" style="margin:20px;"></textarea></div>
+      <div class="pref">  <div style="text-align: center; padding-bottom: 20px; padding-top: 20px; "><h2>DO YOU HAVE <span style="color: orange">ANY PREFERENCES </span></h2>
+    </div>
+    <textarea id="wmd-input" class="wmd-input wz-element processed" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length="" style="margin:20px;"></textarea></div>
 
       
 
-      <button class="but" type="submit" name="action" style="margin-right:20px;">SEARCH</button>
+      <button class="but" type="submit" name="action" onclick="showFindings()"; style="margin-right:20px;">SEARCH</button>
 
+<div id="compare-table">
       <div class="places-found">
         <h2 class="sub-title"> Places Found </h2>
         <div class="one-item">
@@ -116,7 +121,7 @@
                       <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
                       A beautiful, attractive and semi-furnished BHK building on sale which has ...
                     </p><br/>
-                    <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                    <button class="carousel-button" onclick="location.href = 'product.html';">VIEW MORE</button>
                 </div>
             </div>
         </div>
@@ -132,7 +137,7 @@
                       <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
                       A beautiful, attractive and semi-furnished BHK building on sale which has ...
                     </p><br/>
-                    <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                    <button class="carousel-button" onclick="location.href = 'product.html';">VIEW MORE</button>
                 </div>
             </div>
         </div>
@@ -148,12 +153,12 @@
                       <strong> Total Price: </strong> Rs. 20,000 /month <br/><br/>
                       A beautiful, attractive and semi-furnished BHK building on sale which has ...
                     </p><br/>
-                    <button class="carousel-button" onclick="location.href = 'checkout.html';">VIEW MORE</button>
+                    <button class="carousel-button" onclick="location.href = 'product.html';">VIEW MORE</button>
                 </div>
             </div>
         </div>
       </div>
-
+</div>
   
 </div>
 
@@ -206,6 +211,14 @@
     * The key parameter will contain your own API key (which is not needed for this tutorial)
     * The callback parameter executes the initMap() function
     -->
+
+    <script type="text/javascript">
+  function showFindings() {
+   document.getElementById('compare-table').style.display = "block";
+}
+</script>
+
+
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=
 AIzaSyCmlYRGM1xqhjWv6MZB-yTEU0ozZyPcTqY
