@@ -1,0 +1,526 @@
+<html>
+
+<head>
+  <title> FURNITURE SELL </title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<style type="text/css">
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+
+  .nav-wrapper {
+    width: 100%;
+      background-color:white;
+      color:#fff;
+      transition: all 0.25s ease;
+      position:absolute;
+      z-index: 10;
+      width:100%;
+      padding: 5px;
+      position: fixed;
+
+    /* make sure to add vendor prefixes here */
+  }
+  .logo{
+    float: left;
+  }
+  .nav-menu{
+    float: right;
+  }
+
+  .nav-wrapper.past-main {
+      background-color:#fff;
+      color:black;
+      position: fixed;
+  }
+
+  .list-button{
+    float: left;
+    margin-top: 10px;
+  }
+  .register{
+    float: right;
+    padding-bottom: 10px;
+    margin-top: 8px;
+  }
+  .register li{
+    display: inline;
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+  .nav-menu .register button{
+    border: none;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+
+  }
+    .nav-menu .register button:hover{
+      color: orange;
+    }
+
+    .wish-list{
+    border-radius: 50%;
+    border: 2px solid orange;
+    padding: 4px;
+    cursor: pointer;
+    color: black;
+    }
+    .wish-list:hover{
+      background: orange;
+    }
+
+
+
+  .nav-button {
+  background-color: transparent; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+.nav-button.past-main{
+  color: black;
+
+}
+
+
+
+.nav-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.banner-text{
+  padding-top: 190px;
+  text-align: center;
+  font-size: 42px;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.category-btn{
+    text-align: center;
+  }
+
+  .list-btn{
+    background-color: orange;
+      color: white;
+      font-size: 16px;
+      padding: 12px 42px;
+      border: none;
+
+  }
+  .list-btn:hover {
+      background-color: white; 
+      color: black; 
+          
+  }
+
+    
+  .icon-bar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:100px;
+    padding: 30px;
+  }
+  .icon-bar .each-icon{
+    display: inline-block;
+    text-align: center;
+  }
+  hr{
+    border-color:#dcdcdc; 
+    border-style:solid;
+    margin: 30px;
+
+
+    
+  }
+
+  /****************************************************************************/
+
+
+/**********************************************************************************/
+
+
+
+
+.footer-wrapper li{
+
+  text-decoration: none;
+  display: inline;
+  padding: 0px 80px;
+}
+.first-block a{
+  color: black
+
+}
+a{
+  text-decoration: none
+}
+
+
+  .clearfix:after {
+     content: " "; /* Older browser do not support empty content */
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+}
+
+
+/*serach bar*/
+
+input[type=text]{
+  margin: 10px;
+  width: 300px;
+  border:2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:0.3s;
+}
+
+input[type=text]:focus{
+  border-color:#df6e21;
+  box-shadow: 0 0 8px 0 #df6e21;
+}
+
+
+.footer-wrapper li{
+
+  text-decoration: none;
+  display: inline;
+  padding: 0px 80px;
+;
+}
+
+.product-image input[type=text]{
+  margin: 10px;
+  width: 150px;
+  border:2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:0.3s;
+}
+
+
+/*************/
+/* form */
+.form-style-5{
+    
+    overflow-x: hidden;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    
+    display: inline-block;
+    padding-left: 250px;
+
+}
+.inside{
+    width: 100%;
+    text-align: center;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+
+.inside img{
+    width: 40px;
+}
+
+.first-div{
+  float: left;
+}
+
+.first{
+  padding-top:100px;
+  padding-left: 40px;
+}
+
+.send{
+    text-align: center;
+    padding: 30px;
+
+}
+
+.send button{
+    border: 1px solid #2096ba;
+    color: #2096ba;
+    font-size: 25px;
+    height: 50px;
+    width: 100px;
+    background: none;
+
+}
+
+.send button:hover{
+    background: #2096ba;
+    color: white;
+}
+
+.form-style-1 {
+
+    padding: 50px;
+    padding-top: 30px;
+    display: block;
+    list-style: none;
+    padding-left: 250px;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #aa;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid black;
+}
+.form-style-1 .field-divided{
+    width: 320px;
+    margin-bottom: 30px;
+}
+
+.form-style-1 .field-long{
+    width: 62%;
+
+}
+.form-style-1 .field-select{
+    width: 100%;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    background: none;
+    font-size:18px;
+
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #2096ba;
+    color: #2096ba;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #2096ba;
+    box-shadow:none;
+    color:white;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:none;
+}
+
+.one{
+  display: flex;
+}
+
+.personal_info{
+  padding-top: 20px;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+  <nav class="nav-wrapper clearfix">
+      <div class="logo"><img src="logo.png" style="height: 45px; width: 70px"></div>
+      <div class="nav-menu">
+        <button class = "btn nav-button" onclick="location.href='post_home.html'"> List your Property</button>
+        <button class = "btn nav-button" onclick="location.href='furniture_sell.html'"> Sell your Furniture</button>  
+        <ul class = "register" >
+        <li><span class="wish-list fas fa-shopping-cart" onclick="location.href='cart.html'"></span></a></li>
+          <li><button>Register</button></li>
+          <li><button>Login</button></li>
+        </ul> 
+        <!-- <div class="register">Register</div>
+        <div class="login">Login  </div> -->
+        </div>
+    </nav>
+    <div style="text-align: center; padding-bottom: 10px; padding-top:100px;"><h1>RENT YOUR <span style="color: orange">SPACE</span></h1>
+    <p>*Post your space to rent* </p>
+    </div>
+
+
+    <div style="text-align: center; padding-bottom: 10px; padding-top:10px;"><h2>PERSONAL <span style="color: orange"> INFORMATION</span></h2>
+    </div>
+ <div class="form-style-5">
+  <!--<h2>SPACES <span style="color: orange">AVAILABLE </span></h2></div>-->
+
+<div class="personal_info">
+                    <div class="inside">
+                      <div class="first-div">
+                        <span class="icon fa fa-user-alt"></span>
+                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" type="text">
+
+                        <span class="icon"><i class="icon fa fa-map-marked-alt" style="padding-left:100px;"></i> </span>
+                        <input name="name" value="" placeholder="Location" aria-required="true" title="Name" class="large half margin required" type="text">
+                      </div> <br/><br/>
+
+                      <div class="first-div">
+                        <span class="icon"><i class="icon fa fa-phone"></i></span>
+                        <input name="name" value="" placeholder="Contact" aria-required="true" title="Name" class="large half margin required" type="text">
+
+                        <span class="icon"><i class="icon fa fa-envelope" style="padding-left:100px;"></i></span>
+                        <input name="name" value="" placeholder="Email" aria-required="true" title="Name" class="large half margin required" type="text">
+                      </div>
+                    </div>
+                </div>
+</div>
+
+<div style="text-align: center; padding-bottom: 10px; padding-top:60px;"><h2>PROPERTY<span style="color: orange"> INFORMATION </span></h2>
+    </div>
+<ul class="form-style-1">
+    <div class="one">
+    <li>
+        <label>Choose your Property Type</label>
+        <select name="field4" class="field-divided" style="margin-right:80px;">
+        <option value="Advertise">Room</option>
+        <option value="Partnership">Flat</option>
+        <option value="Partnership">Apartment</option>
+        <option value="Partnership">House</option>
+        <option value="General Question">Land</option>
+        </select>
+    </li>
+    <li style="padding-left:40px;">
+      <label>Location <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Location" style="margin-bottom:25px;"/>
+    </li>
+  </div>
+  <div class="two">
+    <li style="margin-bottom:30px;">
+      <label>No of:</label>
+      <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:150px;"/>
+      <input type="number" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:150px;"/>
+      <input type="number" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:150px;"/>
+      <input type="number" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:150px;"/>
+
+    </li>
+    <li>
+      <label>Price <span class="required">*</span></label><input type="number" name="field1" class="field-divided" placeholder="Price" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Duration (From - To)</label>
+        <input type="date" name="field3" class="field-divided" placeholder="From" style="margin-bottom:25px;"/>&nbsp;<input type="date" name="field3" class="field-divided" placeholder="To" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Description <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li>
+        <label style="margin-top:25px;">Photos <span class="required">*</span></label>
+        <button style="height: 200px;border: 1px solid blue;">Drag your images here</button>
+    </li>
+    </div>
+</ul>
+
+
+ <div style="text-align: center; padding-bottom: 10px; "><h2>SEND US <span style="color: orange">YOUR ITEM PHOTO </span></h2>
+    </div>
+
+<ul class="form-style-1" style="padding-top:30px;">
+    <div class="three">
+    <li>
+        <label>Preferences <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li style="margin-top:25px; float: right; ">
+        <input type="submit" value="Submit" style="margin-right:400px;"/>
+  </li>
+</div>
+  </ul>
+
+
+
+  <div class ="footer-wrapper" style="background: #111111; height: 100px; text-align: center; color: white; padding: 20px; margin-top:30px;">
+  The Hipsters Ⓒ 2018<br/><br/>
+  <li>
+
+  About Us </li>
+
+<li>Terms Of Use</li>
+
+
+<li>Privacy Policies</li>
+    
+  </div>
+
+</body>
+</html>
