@@ -169,10 +169,17 @@
   }
 
   /****************************************************************************/
-.uploader {position:relative; text-align: center;
+ .uploader {position:relative;
     margin: 0 auto;
 
-   overflow:hidden; width:90%; height:170px; background:#f3f3f3; border:2px dashed #dcdcdc;
+   overflow:hidden; width:80%; height:170px; background:#f3f3f3; border:2px dashed #dcdcdc;
+/*   background: url('https://d30y9cdsu7xlg0.cloudfront.net/png/26537-200.png') repeat-x;
+*/   /* padding:0px 20px;
+    background-repeat: space;
+    background-size: 180px 150px;
+    background-clip:content-box;
+    background-position: 10px;*/
+    
  }
 
 
@@ -198,6 +205,7 @@
   border: 1px solid #dddddd;
 
 }
+
 
 /**********************************************************************************/
 
@@ -744,10 +752,18 @@ input[type=text]:focus{
  <div style="text-align: center; padding-bottom: 10px; "><h2>SEND US <span style="color: orange">YOUR ITEM PHOTO </span></h2>
     </div>
 
-    <div class="uploader">
+     <div class="uploader">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+  <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
 
-<input type="file" accept="image/*" multiple id="filePhoto" placeholder="DOUBLE CLICK TO ADD PHOTOS"> <h6>DOUBLE CLICK TO ADD PHOTOS</h6>
+
+<input type="file" accept="image/*" multiple id="filePhoto">
 </div>
+
+
 
 
 
@@ -771,14 +787,19 @@ input[type=text]:focus{
     
   </div>
     <script type="text/javascript">
+
+  
     
    filePhoto.onchange = function(e) {
       for (let i = 0; i < this.files.length; i++) {
         let url = URL.createObjectURL(this.files[i]);
         let img = new Image();
         img.src = url;
-        var b = document.getElementsByClassName("uploader")
-        b[0].appendChild(img);
+        var b = document.getElementsByClassName("imgClass")
+     // var ba = document.querySelectorAll(img)
+      //  b[0].appendChild(img);
+      console.log(b, this.files.length)
+      document.getElementsByClassName('uploader')[0].replaceChild(img, b[i])
         img.onload = function() {
           URL.revokeObjectURL(this.src);
         }

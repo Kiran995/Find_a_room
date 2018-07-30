@@ -389,13 +389,18 @@ select{
   margin-left: 120px;
 }
 
-.uload{
-  margin-left: 20px;
-}
-  .uploader {position:relative; text-align: center;
-    padding-left: 220px;
 
-   overflow:hidden; width:55%; height:170px; background:#f3f3f3; border:2px dashed #dcdcdc;
+.uploader {position:relative;
+    margin-left: 20px;
+
+   overflow:hidden; width:76.59%; height:130px; background:#f3f3f3; border:2px dashed #dcdcdc;
+/*   background: url('https://d30y9cdsu7xlg0.cloudfront.net/png/26537-200.png') repeat-x;
+*/   /* padding:0px 20px;
+    background-repeat: space;
+    background-size: 180px 150px;
+    background-clip:content-box;
+    background-position: 10px;*/
+    
  }
 
 
@@ -415,7 +420,7 @@ select{
 
 .uploader img {
   height: 150px;
-  width: 150px;
+  width: 110px;
   object-fit: cover;
   margin: 10px;
   border: 1px solid #dddddd;
@@ -513,20 +518,20 @@ select{
     </li>
     <li>
         <label style="margin-top:25px;">Photos (Double click on the box to add images)<span class="required">*</span></label>
-        <div class="uload">
-        <div class="uploader">
+        
+     <div class="uploader">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+  <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+ <img src="https://static.thenounproject.com/png/49665-200.png" class="imgClass">
+
 
 <input type="file" accept="image/*" multiple id="filePhoto">
 </div>
-</div>
-    </li>
-    </div>
-</ul>
-     
+<div style="margin-top:20px">
+<li>
 
-<ul class="form-style-1" style="padding-top:0px;">
-    <div class="three" style="padding-top:0px;">
-    <li>
         <label>Preferences <span class="required">*</span></label>
         <textarea name="field5" id="field5" class="field-long field-textarea" style="margin-left:20px;"></textarea>
     </li>
@@ -534,7 +539,10 @@ select{
         <input type="submit" value="Submit" style="margin-right:180px;"/>
   </li>
 </div>
-  </ul>
+</div>
+    </li>
+    </div>
+</ul>
 
 </div>
 
@@ -552,14 +560,19 @@ select{
   </div>
 
     <script type="text/javascript">
+
+  
     
    filePhoto.onchange = function(e) {
       for (let i = 0; i < this.files.length; i++) {
         let url = URL.createObjectURL(this.files[i]);
         let img = new Image();
         img.src = url;
-        var b = document.getElementsByClassName("uploader")
-        b[0].appendChild(img);
+        var b = document.getElementsByClassName("imgClass")
+     // var ba = document.querySelectorAll(img)
+      //  b[0].appendChild(img);
+      console.log(b, this.files.length)
+      document.getElementsByClassName('uploader')[0].replaceChild(img, b[i])
         img.onload = function() {
           URL.revokeObjectURL(this.src);
         }
@@ -571,5 +584,6 @@ select{
 
 
   </script>
+
 </body>
 </html>
