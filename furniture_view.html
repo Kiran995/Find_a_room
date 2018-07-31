@@ -11,6 +11,8 @@
    
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
+<link href="modals.css" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
 <style type="text/css">
@@ -157,6 +159,12 @@ body {
   line-height: 1.5em; }
 
 .action{
+    padding-top: 11px;
+    text-transform: UPPERCASE;
+  font-weight: bold;
+}
+
+.act{
     padding-top: 11px;
     text-transform: UPPERCASE;
   font-weight: bold;
@@ -349,6 +357,9 @@ background: #428bca;
   color: white;
 }
 
+.login-btn a{
+  color: #2096ba;
+}
 
 </style>
 
@@ -362,7 +373,7 @@ background: #428bca;
             <div class="nav-menu">
                 <button class = "btn nav-button"> List your Property</button>   
                 <ul class = "register" >
-                <li><a><span class="wish-list fa fa-heart" ></span></a></li>
+                <li><a><span class="wish-list fas fa-shopping-cart" ></span></a></li>
                     <li><button>Register</button></li>
                     <li><button>Login</button></li>
                 </ul>   
@@ -425,19 +436,36 @@ background: #428bca;
                             <span class="color blue"></span>
                         </div> -->
                         
-                        <div class="action" style="margin-bottom:12px;">
+                        <div class="action" style="margin-bottom:12px; display:flex;">
                           <button class = "add-to-cart btn btn-default" onclick="location.href='cart.html'">ADD TO CART</button>
                             
-                            <button class="like btn btn-default" type="button">BUY NOW</button>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="description" style="padding-top: 30px;">
-                
+                            <div class="login-btn">
+<a href="#" class="button" data-toggle="modal" data-target="#login-modal">BUY NOW</a>
+</div>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h1>Login to Your Account</h1><br>
+          <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
+          
+          <div class="login-help">
+          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          </div>
         </div>
+      </div>
+      </div>
+    </div>
+                        
+  </div>
+</div>
+<div class="description" style="padding-top: 30px;"></div>
         <div class="map-location">
-        <h4><span class="action"> Buyer's Speak: 
+        <h4><span class="act"> Buyer's Speak: 
 
         </span></h4>
         <p> Can you manage it with bedsheet?</p>

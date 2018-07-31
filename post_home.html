@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Find a room </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <link rel='stylesheet' type='text/css' href='poststyle.css'>
+  </head>
+  <body>
+    <nav class="nav-wrapper clearfix">
+            <div class="logo">LOGO</div>
+            <div class="nav-menu">
+                <button class = "btn nav-button"> List your Property</button>   
+                <ul class = "register" >
+                <li><a><span class="wish-list fas fa-shopping-cart" ></span></a></li>
+                    <li><button>Register</button></li>
+                    <li><button>Login</button></li>
+                </ul>   
+                <!-- <div class="register">Register</div>
+                <div class="login">Login    </div> -->
+            </div>
+        </nav>
+
+  <div class='vertical-menu'>
+    <div class="bar_title">
+            <div class="small_bar">
+                <h1> SELL US YOUR PROPERTY </h1>
+            </div>
+        </div>
+
+    <div class="form-style-5">
+      
+<form>
+<h2><span class="number">1</span> Personal Information</h2>
+
+<ul class="form-style-1">
+    <div class="personal_info">
+                    <div class="inside">
+                        <span class="icon fa fa-user-alt" style="padding-left:20px;"></span>
+                        <input name="name" value="" placeholder="Name" aria-required="true" title="Name" class="large half margin required" type="text">
+
+                        <span class="icon" style="padding-left:20px;"><i class="icon fa fa-map-marked-alt"></i> </span>
+                        <input name="name" value="" placeholder="Location" aria-required="true" title="Name" class="large half margin required" type="text">
+
+                        <span class="icon" style="padding-left:20px;"><i class="icon fa fa-phone"></i></span>
+                        <input name="name" value="" placeholder="Contact" aria-required="true" title="Name" class="large half margin required" type="number">
+
+                        <span class="icon" style="padding-left:20px;"><i class="icon fa fa-envelope"></i></span>
+                        <input name="name" value="" placeholder="Email" aria-required="true" title="Name" class="large half margin required" type="email">
+                            
+                    </div>
+                </div>
+
+<h2><span class="number">2</span> Property Information</h2>
+
+  <ul class="form-style-1">
+    <div class="one">
+    <li>
+        <label>Choose your Property Type</label>
+        <select name="field4" class="field-divided" style="margin-right:80px;">
+        <option value="Advertise">Room</option>
+        <option value="Partnership">Apartment</option>
+        <option value="General Question">House</option>
+        </select>
+    </li>
+    <li>
+      <label>Location <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Location" style="margin-bottom:25px;"/>
+    </li>
+  </div>
+  <div class="two">
+    <li style="margin-bottom:30px;">
+      <label>No of:</label>
+      <input type="number" name="field1" class="field-style field-split align-left" placeholder="Kitchen" style="width:100px;"/>
+      <input type="number" name="field2" class="field-style field-split align-right" placeholder="Bedroom" style="width:100px;"/>
+      <input type="number" name="field3" class="field-style field-split align-left" placeholder="Bathroom" style="width:100px;"/>
+      <input type="number" name="field4" class="field-style field-split align-right" placeholder="Hall" style="width:100px;"/>
+
+    </li>
+    <li>
+      <label>Price <span class="required">*</span></label><input type="number" name="field1" class="field-divided" placeholder="Price" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Duration (From - To)</label>
+        <input type="date" name="field3" class="field-divided" placeholder="From" style="margin-bottom:25px;"/>&nbsp;<input type="date" name="field3" class="field-divided" placeholder="To" style="margin-bottom:25px;"/>
+    </li>
+    <li>
+        <label>Description <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li>
+        <label style="margin-top:25px;">Photos <span class="required">*</span></label>
+        <button style="height: 200px;border: 1px solid blue;">Drag your images here</button>
+    </li>
+    </div>
+</ul>
+
+
+
+
+
+    
+<h2><span class="number">3</span> Your Preference</h2>
+
+  <ul class="form-style-1" style="padding-top:30px;">
+    <div class="three">
+    <li>
+        <label>Preferences <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li style="margin-top:25px; float: right">
+        <input type="submit" value="Submit" />
+  </li>
+</div>
+  </ul>
+
+  
+    
+  
+</form> 
+</div>
+  </div>
+
+
+  </div>
+  <script>
+      // Initialize and add the map
+      function initMap() {
+
+       // The location of Ktm
+        var Kathmandu = {lat: 27.7172, lng: 85.3240};
+       // The map, centered at Ktm
+
+        var Kathmandu = {lat: 27.7172, lng: 85.3240};
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {zoom: 16, center: Kathmandu});
+
+        var contentString = 'Rs. 5000'
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        
+
+
+
+        // The marker, positioned at Ktm
+
+
+
+        var marker = new google.maps.Marker({position: Kathmandu, map: map, title:'Kathmandu'});
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+  </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyCmlYRGM1xqhjWv6MZB-yTEU0ozZyPcTqY
+&callback=initMap">
+  </script>
+
+</body>
+</html>
